@@ -1,0 +1,119 @@
+[
+  {
+    "id": "products",
+    "method": "GET",
+    "path": "productsList",
+    "http": 200,
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "responseCode": 200,
+    "message": null,
+    "products": 34,
+    "observedAt": "2026-10-07T10:34:57.6791262+00:00"
+  },
+  {
+    "id": "products-post",
+    "method": "POST",
+    "path": "productsList",
+    "http": 200,
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "responseCode": 405,
+    "message": "This request method is not supported.",
+    "products": 0,
+    "observedAt": "2026-10-07T10:34:58.9076627+00:00"
+  },
+  {
+    "id": "brands",
+    "method": "GET",
+    "path": "brandsList",
+    "http": 200,
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "responseCode": 200,
+    "message": null,
+    "products": 0,
+    "observedAt": "2026-10-07T10:35:00.4396482+00:00"
+  },
+  {
+    "id": "brands-put",
+    "method": "PUT",
+    "path": "brandsList",
+    "http": 200,
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "responseCode": 405,
+    "message": "This request method is not supported.",
+    "products": 0,
+    "observedAt": "2026-10-07T10:35:01.8581517+00:00"
+  },
+  {
+    "id": "search-top",
+    "method": "POST",
+    "path": "searchProduct",
+    "http": 200,
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "responseCode": 200,
+    "message": null,
+    "products": 14,
+    "observedAt": "2026-10-07T10:35:03.3380142+00:00"
+  },
+  {
+    "id": "search-missing",
+    "method": "POST",
+    "path": "searchProduct",
+    "http": 200,
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "responseCode": 400,
+    "message": "Bad request, search_product parameter is missing in POST request.",
+    "products": 0,
+    "observedAt": "2026-10-07T10:35:04.3373458+00:00"
+  },
+  {
+    "id": "search-empty",
+    "method": "POST",
+    "path": "searchProduct",
+    "http": 200,
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "responseCode": 200,
+    "message": null,
+    "products": 34,
+    "observedAt": "2026-10-07T10:35:05.6444492+00:00"
+  },
+  {
+    "id": "login-missing",
+    "method": "POST",
+    "path": "verifyLogin",
+    "http": 200,
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "responseCode": 400,
+    "message": "Bad request, email or password parameter is missing in POST request.",
+    "products": 0,
+    "observedAt": "2026-10-07T10:35:06.8472008+00:00"
+  },
+  {
+    "id": "login-delete",
+    "method": "DELETE",
+    "path": "verifyLogin",
+    "http": 200,
+    "contentType": [
+      "text/html; charset=utf-8"
+    ],
+    "responseCode": 405,
+    "message": "This request method is not supported.",
+    "products": 0,
+    "observedAt": "2026-10-07T10:35:08.4302411+00:00"
+  }
+]

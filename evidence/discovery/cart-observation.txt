@@ -1,0 +1,22 @@
+Home
+ Products
+Cart
+Signup / Login
+Test Cases
+API Testing
+Video Tutorials
+Contact us
+Home Shopping Cart
+Proceed To Checkout
+Item Description Price Quantity Total
+Blue Top
+Women > Tops
+Rs. 500
+2
+Rs. 1000
+
+
+SUBSCRIPTION
+Get the most recent updates from
+our site and be updated your self...
+Copyright © 2021 All rights reserved
