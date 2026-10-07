@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "TC-UI-001",
+    "req": "REQ-AUTH-001",
+    "scenario": "TS-UI-001",
+    "module": "Authentication",
+    "title": "Login form exposes required and masked inputs",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The Login to your account heading, email field, masked password field and Login button are visible."
+      ],
+      [
+        "Inspect the email required property.",
+        "The email field required property is true."
+      ],
+      [
+        "Inspect the password input type and required property.",
+        "The password type is password and required is true."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "smoke,regression,sanity",
+    "method": "loginForm",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-002",
+    "req": "REQ-AUTH-002",
+    "scenario": "TS-UI-002",
+    "module": "Authentication",
+    "title": "Unknown account receives the actual login error",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The Login to your account heading, email field, masked password field and Login button are visible."
+      ],
+      [
+        "Enter nobody-<UUID>@example.com as email.",
+        "The email field contains the generated unknown address."
+      ],
+      [
+        "Enter a generated invalid test password.",
+        "The password field is populated and masked."
+      ],
+      [
+        "Click Login.",
+        "The page remains /login and displays Your email or password is incorrect!"
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression",
+    "method": "invalidLogin",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-003",
+    "req": "REQ-AUTH-001",
+    "scenario": "TS-UI-003",
+    "module": "Authentication",
+    "title": "Blank email blocks form submission",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The Login to your account heading, email field, masked password field and Login button are visible."
+      ],
+      [
+        "Leave email blank.",
+        "Email value is empty."
+      ],
+      [
+        "Click Login.",
+        "The URL remains /login and the email validity.valueMissing property is true."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression",
+    "method": "requiredLoginEmail",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-004",
+    "req": "REQ-AUTH-003",
+    "scenario": "TS-UI-004",
+    "module": "Authentication",
+    "title": "Create a synthetic account through the UI",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The New User Signup! heading is visible."
+      ],
+      [
+        "Enter the synthetic name QA Portfolio in the signup name field.",
+        "The signup name field contains QA Portfolio."
+      ],
+      [
+        "Enter a unique email using the qa-portfolio-<UUID>@example.com pattern.",
+        "The signup email field contains that unique email."
+      ],
+      [
+        "Click Signup.",
+        "The URL path is /signup and ENTER ACCOUNT INFORMATION is visible."
+      ],
+      [
+        "Enter the configured test-only password.",
+        "The password field is populated and has type password."
+      ],
+      [
+        "Enter first name QA.",
+        "The First name field contains QA."
+      ],
+      [
+        "Enter last name Portfolio.",
+        "The Last name field contains Portfolio."
+      ],
+      [
+        "Enter address Test Street.",
+        "The Address field contains Test Street."
+      ],
+      [
+        "Select India as the country.",
+        "The Country selection is India."
+      ],
+      [
+        "Enter Andhra Pradesh as the state.",
+        "The State field contains Andhra Pradesh."
+      ],
+      [
+        "Enter Vijayawada as the city.",
+        "The City field contains Vijayawada."
+      ],
+      [
+        "Enter zipcode 520001.",
+        "The Zipcode field contains 520001."
+      ],
+      [
+        "Enter synthetic mobile number 9999999999.",
+        "The Mobile Number field contains 9999999999."
+      ],
+      [
+        "Click Create Account.",
+        "ACCOUNT CREATED! is visible."
+      ],
+      [
+        "Click Continue.",
+        "The home page shows Logged in as QA Portfolio."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "smoke,regression,critical",
+    "method": "registerAccount",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-005",
+    "req": "REQ-AUTH-004",
+    "scenario": "TS-UI-005",
+    "module": "Authentication",
+    "title": "Authenticate with a newly created account",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The New User Signup! heading is visible."
+      ],
+      [
+        "Enter the synthetic name QA Portfolio in the signup name field.",
+        "The signup name field contains QA Portfolio."
+      ],
+      [
+        "Enter a unique email using the qa-portfolio-<UUID>@example.com pattern.",
+        "The signup email field contains that unique email."
+      ],
+      [
+        "Click Signup.",
+        "The URL path is /signup and ENTER ACCOUNT INFORMATION is visible."
+      ],
+      [
+        "Enter the configured test-only password.",
+        "The password field is populated and has type password."
+      ],
+      [
+        "Enter first name QA.",
+        "The First name field contains QA."
+      ],
+      [
+        "Enter last name Portfolio.",
+        "The Last name field contains Portfolio."
+      ],
+      [
+        "Enter address Test Street.",
+        "The Address field contains Test Street."
+      ],
+      [
+        "Select India as the country.",
+        "The Country selection is India."
+      ],
+      [
+        "Enter Andhra Pradesh as the state.",
+        "The State field contains Andhra Pradesh."
+      ],
+      [
+        "Enter Vijayawada as the city.",
+        "The City field contains Vijayawada."
+      ],
+      [
+        "Enter zipcode 520001.",
+        "The Zipcode field contains 520001."
+      ],
+      [
+        "Enter synthetic mobile number 9999999999.",
+        "The Mobile Number field contains 9999999999."
+      ],
+      [
+        "Click Create Account.",
+        "ACCOUNT CREATED! is visible."
+      ],
+      [
+        "Click Continue.",
+        "The home page shows Logged in as QA Portfolio."
+      ],
+      [
+        "Click Logout.",
+        "The URL path is /login and Login to your account is visible."
+      ],
+      [
+        "Enter the newly registered email in the login email field.",
+        "The login email field contains the registered synthetic email."
+      ],
+      [
+        "Enter the configured test password in the login password field.",
+        "The password field is populated and masked."
+      ],
+      [
+        "Click Login.",
+        "The home page shows Logged in as QA Portfolio and Logout is visible."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "smoke,regression,critical",
+    "method": "validLogin",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-006",
+    "req": "REQ-AUTH-005",
+    "scenario": "TS-UI-006",
+    "module": "Authentication",
+    "title": "Logout removes the authenticated navigation",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The New User Signup! heading is visible."
+      ],
+      [
+        "Enter the synthetic name QA Portfolio in the signup name field.",
+        "The signup name field contains QA Portfolio."
+      ],
+      [
+        "Enter a unique email using the qa-portfolio-<UUID>@example.com pattern.",
+        "The signup email field contains that unique email."
+      ],
+      [
+        "Click Signup.",
+        "The URL path is /signup and ENTER ACCOUNT INFORMATION is visible."
+      ],
+      [
+        "Enter the configured test-only password.",
+        "The password field is populated and has type password."
+      ],
+      [
+        "Enter first name QA.",
+        "The First name field contains QA."
+      ],
+      [
+        "Enter last name Portfolio.",
+        "The Last name field contains Portfolio."
+      ],
+      [
+        "Enter address Test Street.",
+        "The Address field contains Test Street."
+      ],
+      [
+        "Select India as the country.",
+        "The Country selection is India."
+      ],
+      [
+        "Enter Andhra Pradesh as the state.",
+        "The State field contains Andhra Pradesh."
+      ],
+      [
+        "Enter Vijayawada as the city.",
+        "The City field contains Vijayawada."
+      ],
+      [
+        "Enter zipcode 520001.",
+        "The Zipcode field contains 520001."
+      ],
+      [
+        "Enter synthetic mobile number 9999999999.",
+        "The Mobile Number field contains 9999999999."
+      ],
+      [
+        "Click Create Account.",
+        "ACCOUNT CREATED! is visible."
+      ],
+      [
+        "Click Continue.",
+        "The home page shows Logged in as QA Portfolio."
+      ],
+      [
+        "Click Logout.",
+        "The URL is /login; Signup / Login is visible and Logged in as QA Portfolio is absent."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression",
+    "method": "logout",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-007",
+    "req": "REQ-CAT-001",
+    "scenario": "TS-UI-007",
+    "module": "Catalog",
+    "title": "Catalog exposes named product cards",
+    "steps": [
+      [
+        "Navigate to /products.",
+        "ALL PRODUCTS is visible and at least one product card is displayed."
+      ],
+      [
+        "Inspect the Blue Top card.",
+        "The card displays Blue Top and Rs. 500."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "smoke,regression",
+    "method": "catalog",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-008",
+    "req": "REQ-CAT-002",
+    "scenario": "TS-UI-008",
+    "module": "Catalog",
+    "title": "Search for top returns matching catalog items",
+    "steps": [
+      [
+        "Navigate to /products.",
+        "Search Product field is visible."
+      ],
+      [
+        "Enter top in Search Product.",
+        "The field contains top."
+      ],
+      [
+        "Click the search button.",
+        "SEARCHED PRODUCTS is visible and at least one matching product is displayed."
+      ],
+      [
+        "Read each returned product name.",
+        "Every displayed name contains top, ignoring case."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression",
+    "method": "searchTop",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-009",
+    "req": "REQ-CAT-002",
+    "scenario": "TS-UI-009",
+    "module": "Catalog",
+    "title": "Unknown search has no product cards",
+    "steps": [
+      [
+        "Navigate to /products.",
+        "Search Product field is visible."
+      ],
+      [
+        "Enter qa-no-product-<UUID>.",
+        "The field contains that unique string."
+      ],
+      [
+        "Click the search button.",
+        "SEARCHED PRODUCTS is visible and zero product cards are displayed."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "regression",
+    "method": "searchNoMatch",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-010",
+    "req": "REQ-CAT-003",
+    "scenario": "TS-UI-010",
+    "module": "Catalog",
+    "title": "Product detail exposes the inspected item attributes",
+    "steps": [
+      [
+        "Navigate to /product_details/1.",
+        "The product information heading is Blue Top."
+      ],
+      [
+        "Read the product price and attributes.",
+        "Price is Rs. 500; Availability is In Stock; Condition is New; Brand is Polo."
+      ],
+      [
+        "Inspect the quantity field.",
+        "Its initial value is 1."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression",
+    "method": "productDetails",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-011",
+    "req": "REQ-CART-001",
+    "scenario": "TS-UI-011",
+    "module": "Cart",
+    "title": "Quantity two produces the correct line total",
+    "steps": [
+      [
+        "Navigate to /product_details/1.",
+        "Blue Top and Rs. 500 are visible."
+      ],
+      [
+        "Replace the Quantity value with 2.",
+        "The Quantity field contains 2."
+      ],
+      [
+        "Click Add to cart.",
+        "The Added! modal is visible with Your product has been added to cart."
+      ],
+      [
+        "Navigate to /view_cart.",
+        "The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "smoke,regression,critical",
+    "method": "cartTotal",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-012",
+    "req": "REQ-CART-002",
+    "scenario": "TS-UI-012",
+    "module": "Cart",
+    "title": "Remove the only item from the cart",
+    "steps": [
+      [
+        "Navigate to /product_details/1.",
+        "Blue Top and Rs. 500 are visible."
+      ],
+      [
+        "Replace the Quantity value with 2.",
+        "The Quantity field contains 2."
+      ],
+      [
+        "Click Add to cart.",
+        "The Added! modal is visible with Your product has been added to cart."
+      ],
+      [
+        "Navigate to /view_cart.",
+        "The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000."
+      ],
+      [
+        "Click the delete control on the Blue Top row.",
+        "The Blue Top row disappears and Cart is empty! becomes visible."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression",
+    "method": "removeCartItem",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-013",
+    "req": "REQ-CART-003",
+    "scenario": "TS-UI-013",
+    "module": "Cart",
+    "title": "Cart contents survive a same-session refresh",
+    "steps": [
+      [
+        "Navigate to /product_details/1.",
+        "Blue Top and Rs. 500 are visible."
+      ],
+      [
+        "Replace the Quantity value with 2.",
+        "The Quantity field contains 2."
+      ],
+      [
+        "Click Add to cart.",
+        "The Added! modal is visible with Your product has been added to cart."
+      ],
+      [
+        "Navigate to /view_cart.",
+        "The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000."
+      ],
+      [
+        "Refresh /view_cart.",
+        "The Blue Top row still shows quantity 2 and total Rs. 1000."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression",
+    "method": "cartPersists",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-014",
+    "req": "REQ-CHK-001",
+    "scenario": "TS-UI-014",
+    "module": "Checkout",
+    "title": "Guest checkout is gated by registration or login",
+    "steps": [
+      [
+        "Navigate to /product_details/1.",
+        "Blue Top and Rs. 500 are visible."
+      ],
+      [
+        "Replace the Quantity value with 2.",
+        "The Quantity field contains 2."
+      ],
+      [
+        "Click Add to cart.",
+        "The Added! modal is visible with Your product has been added to cart."
+      ],
+      [
+        "Navigate to /view_cart.",
+        "The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000."
+      ],
+      [
+        "Click Proceed To Checkout.",
+        "The checkout modal displays Register / Login account to proceed on checkout. and the Register / Login link."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "smoke,regression,critical",
+    "method": "guestCheckout",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-015",
+    "req": "REQ-CHK-002",
+    "scenario": "TS-UI-015",
+    "module": "Checkout",
+    "title": "Authenticated review carries address and cart total",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The New User Signup! heading is visible."
+      ],
+      [
+        "Enter the synthetic name QA Portfolio in the signup name field.",
+        "The signup name field contains QA Portfolio."
+      ],
+      [
+        "Enter a unique email using the qa-portfolio-<UUID>@example.com pattern.",
+        "The signup email field contains that unique email."
+      ],
+      [
+        "Click Signup.",
+        "The URL path is /signup and ENTER ACCOUNT INFORMATION is visible."
+      ],
+      [
+        "Enter the configured test-only password.",
+        "The password field is populated and has type password."
+      ],
+      [
+        "Enter first name QA.",
+        "The First name field contains QA."
+      ],
+      [
+        "Enter last name Portfolio.",
+        "The Last name field contains Portfolio."
+      ],
+      [
+        "Enter address Test Street.",
+        "The Address field contains Test Street."
+      ],
+      [
+        "Select India as the country.",
+        "The Country selection is India."
+      ],
+      [
+        "Enter Andhra Pradesh as the state.",
+        "The State field contains Andhra Pradesh."
+      ],
+      [
+        "Enter Vijayawada as the city.",
+        "The City field contains Vijayawada."
+      ],
+      [
+        "Enter zipcode 520001.",
+        "The Zipcode field contains 520001."
+      ],
+      [
+        "Enter synthetic mobile number 9999999999.",
+        "The Mobile Number field contains 9999999999."
+      ],
+      [
+        "Click Create Account.",
+        "ACCOUNT CREATED! is visible."
+      ],
+      [
+        "Click Continue.",
+        "The home page shows Logged in as QA Portfolio."
+      ],
+      [
+        "Navigate to /product_details/1.",
+        "Blue Top and Rs. 500 are visible."
+      ],
+      [
+        "Replace the Quantity value with 2.",
+        "The Quantity field contains 2."
+      ],
+      [
+        "Click Add to cart.",
+        "The Added! modal is visible with Your product has been added to cart."
+      ],
+      [
+        "Navigate to /view_cart.",
+        "The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000."
+      ],
+      [
+        "Click Proceed To Checkout.",
+        "The URL path is /checkout; Address Details and Review Your Order are visible."
+      ],
+      [
+        "Read the delivery address.",
+        "It contains QA Portfolio, Test Street, Vijayawada Andhra Pradesh 520001 and India."
+      ],
+      [
+        "Read the order review and total.",
+        "The Blue Top row shows quantity 2 and Rs. 1000; Total Amount is Rs. 1000."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression,critical",
+    "method": "checkoutReview",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-016",
+    "req": "REQ-CHK-003",
+    "scenario": "TS-UI-016",
+    "module": "Checkout",
+    "title": "Submit a simulated order using synthetic payment data",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The New User Signup! heading is visible."
+      ],
+      [
+        "Enter the synthetic name QA Portfolio in the signup name field.",
+        "The signup name field contains QA Portfolio."
+      ],
+      [
+        "Enter a unique email using the qa-portfolio-<UUID>@example.com pattern.",
+        "The signup email field contains that unique email."
+      ],
+      [
+        "Click Signup.",
+        "The URL path is /signup and ENTER ACCOUNT INFORMATION is visible."
+      ],
+      [
+        "Enter the configured test-only password.",
+        "The password field is populated and has type password."
+      ],
+      [
+        "Enter first name QA.",
+        "The First name field contains QA."
+      ],
+      [
+        "Enter last name Portfolio.",
+        "The Last name field contains Portfolio."
+      ],
+      [
+        "Enter address Test Street.",
+        "The Address field contains Test Street."
+      ],
+      [
+        "Select India as the country.",
+        "The Country selection is India."
+      ],
+      [
+        "Enter Andhra Pradesh as the state.",
+        "The State field contains Andhra Pradesh."
+      ],
+      [
+        "Enter Vijayawada as the city.",
+        "The City field contains Vijayawada."
+      ],
+      [
+        "Enter zipcode 520001.",
+        "The Zipcode field contains 520001."
+      ],
+      [
+        "Enter synthetic mobile number 9999999999.",
+        "The Mobile Number field contains 9999999999."
+      ],
+      [
+        "Click Create Account.",
+        "ACCOUNT CREATED! is visible."
+      ],
+      [
+        "Click Continue.",
+        "The home page shows Logged in as QA Portfolio."
+      ],
+      [
+        "Navigate to /product_details/1.",
+        "Blue Top and Rs. 500 are visible."
+      ],
+      [
+        "Replace the Quantity value with 2.",
+        "The Quantity field contains 2."
+      ],
+      [
+        "Click Add to cart.",
+        "The Added! modal is visible with Your product has been added to cart."
+      ],
+      [
+        "Navigate to /view_cart.",
+        "The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000."
+      ],
+      [
+        "Click Proceed To Checkout.",
+        "The URL path is /checkout; Address Details and Review Your Order are visible."
+      ],
+      [
+        "Click Place Order.",
+        "The URL path is /payment and Payment is visible."
+      ],
+      [
+        "Enter QA Portfolio as Name on Card.",
+        "The Name on Card field contains QA Portfolio."
+      ],
+      [
+        "Enter the synthetic card number 4111111111111111.",
+        "The Card Number field contains that test value."
+      ],
+      [
+        "Enter CVC 123.",
+        "The CVC field contains 123."
+      ],
+      [
+        "Enter expiry month 12.",
+        "The Expiration month field contains 12."
+      ],
+      [
+        "Enter expiry year 2030.",
+        "The Expiration year field contains 2030."
+      ],
+      [
+        "Click Pay and Confirm Order.",
+        "ORDER PLACED! and Congratulations! Your order has been confirmed! are visible."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "smoke,regression,critical",
+    "method": "completeOrder",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-017",
+    "req": "REQ-CHK-004",
+    "scenario": "TS-UI-017",
+    "module": "Checkout",
+    "title": "Missing name prevents payment submission",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The New User Signup! heading is visible."
+      ],
+      [
+        "Enter the synthetic name QA Portfolio in the signup name field.",
+        "The signup name field contains QA Portfolio."
+      ],
+      [
+        "Enter a unique email using the qa-portfolio-<UUID>@example.com pattern.",
+        "The signup email field contains that unique email."
+      ],
+      [
+        "Click Signup.",
+        "The URL path is /signup and ENTER ACCOUNT INFORMATION is visible."
+      ],
+      [
+        "Enter the configured test-only password.",
+        "The password field is populated and has type password."
+      ],
+      [
+        "Enter first name QA.",
+        "The First name field contains QA."
+      ],
+      [
+        "Enter last name Portfolio.",
+        "The Last name field contains Portfolio."
+      ],
+      [
+        "Enter address Test Street.",
+        "The Address field contains Test Street."
+      ],
+      [
+        "Select India as the country.",
+        "The Country selection is India."
+      ],
+      [
+        "Enter Andhra Pradesh as the state.",
+        "The State field contains Andhra Pradesh."
+      ],
+      [
+        "Enter Vijayawada as the city.",
+        "The City field contains Vijayawada."
+      ],
+      [
+        "Enter zipcode 520001.",
+        "The Zipcode field contains 520001."
+      ],
+      [
+        "Enter synthetic mobile number 9999999999.",
+        "The Mobile Number field contains 9999999999."
+      ],
+      [
+        "Click Create Account.",
+        "ACCOUNT CREATED! is visible."
+      ],
+      [
+        "Click Continue.",
+        "The home page shows Logged in as QA Portfolio."
+      ],
+      [
+        "Navigate to /product_details/1.",
+        "Blue Top and Rs. 500 are visible."
+      ],
+      [
+        "Replace the Quantity value with 2.",
+        "The Quantity field contains 2."
+      ],
+      [
+        "Click Add to cart.",
+        "The Added! modal is visible with Your product has been added to cart."
+      ],
+      [
+        "Navigate to /view_cart.",
+        "The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000."
+      ],
+      [
+        "Click Proceed To Checkout.",
+        "The URL path is /checkout; Address Details and Review Your Order are visible."
+      ],
+      [
+        "Click Place Order.",
+        "The URL path is /payment."
+      ],
+      [
+        "Leave Name on Card blank.",
+        "Name on Card value is empty."
+      ],
+      [
+        "Click Pay and Confirm Order.",
+        "The URL remains /payment and Name on Card validity.valueMissing is true."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression",
+    "method": "paymentRequiredName",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-018",
+    "req": "REQ-AUTH-003",
+    "scenario": "TS-UI-018",
+    "module": "Authentication",
+    "title": "Duplicate signup rejects an existing address",
+    "steps": [
+      [
+        "Navigate to /login.",
+        "The New User Signup! heading is visible."
+      ],
+      [
+        "Enter the synthetic name QA Portfolio in the signup name field.",
+        "The signup name field contains QA Portfolio."
+      ],
+      [
+        "Enter a unique email using the qa-portfolio-<UUID>@example.com pattern.",
+        "The signup email field contains that unique email."
+      ],
+      [
+        "Click Signup.",
+        "The URL path is /signup and ENTER ACCOUNT INFORMATION is visible."
+      ],
+      [
+        "Enter the configured test-only password.",
+        "The password field is populated and has type password."
+      ],
+      [
+        "Enter first name QA.",
+        "The First name field contains QA."
+      ],
+      [
+        "Enter last name Portfolio.",
+        "The Last name field contains Portfolio."
+      ],
+      [
+        "Enter address Test Street.",
+        "The Address field contains Test Street."
+      ],
+      [
+        "Select India as the country.",
+        "The Country selection is India."
+      ],
+      [
+        "Enter Andhra Pradesh as the state.",
+        "The State field contains Andhra Pradesh."
+      ],
+      [
+        "Enter Vijayawada as the city.",
+        "The City field contains Vijayawada."
+      ],
+      [
+        "Enter zipcode 520001.",
+        "The Zipcode field contains 520001."
+      ],
+      [
+        "Enter synthetic mobile number 9999999999.",
+        "The Mobile Number field contains 9999999999."
+      ],
+      [
+        "Click Create Account.",
+        "ACCOUNT CREATED! is visible."
+      ],
+      [
+        "Click Continue.",
+        "The home page shows Logged in as QA Portfolio."
+      ],
+      [
+        "Click Logout.",
+        "The URL path is /login."
+      ],
+      [
+        "Enter QA Portfolio in signup name.",
+        "The signup name field contains QA Portfolio."
+      ],
+      [
+        "Enter the previously registered email in signup email.",
+        "The signup email field contains the existing synthetic account email."
+      ],
+      [
+        "Click Signup.",
+        "Email Address already exist! is visible and the URL remains /signup or /login."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "regression",
+    "method": "duplicateSignup",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-019",
+    "req": "REQ-CAT-004",
+    "scenario": "TS-UI-019",
+    "module": "Catalog",
+    "title": "Women Tops category exposes its catalog subset",
+    "steps": [
+      [
+        "Navigate to /category_products/2.",
+        "WOMEN - TOPS PRODUCTS is visible."
+      ],
+      [
+        "Read the category product cards.",
+        "At least one card is visible and Blue Top is present."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "regression",
+    "method": "categoryFilter",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-UI-020",
+    "req": "REQ-CAT-004",
+    "scenario": "TS-UI-020",
+    "module": "Catalog",
+    "title": "Polo brand filter exposes its catalog subset",
+    "steps": [
+      [
+        "Navigate to /brand_products/Polo.",
+        "BRAND - POLO PRODUCTS is visible."
+      ],
+      [
+        "Read the brand product cards.",
+        "At least one card is visible and Blue Top is present."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "regression",
+    "method": "brandFilter",
+    "data": "Synthetic QA account where required; Blue Top product ID 1; no real personal or payment data."
+  },
+  {
+    "id": "TC-API-001",
+    "req": "REQ-API-001",
+    "scenario": "TS-API-001",
+    "module": "API",
+    "title": "GET /api/productsList \u2014 contract validation",
+    "steps": [
+      [
+        "Set api_base_url to https://automationexercise.com/api.",
+        "The request URL resolves to https://automationexercise.com/api/productsList."
+      ],
+      [
+        "Select HTTP method GET.",
+        "The request method is GET."
+      ],
+      [
+        "Leave the request body empty.",
+        "Request data matches the specified form fields; omitted fields stay omitted."
+      ],
+      [
+        "Send the request once.",
+        "HTTP status is 200; parse the body as JSON despite the text/html Content-Type."
+      ],
+      [
+        "Inspect responseCode and response fields.",
+        "Body responseCode is 200; products array is non-empty; ID 1 has name Blue Top, price Rs. 500 and brand Polo."
+      ]
+    ],
+    "kind": "API",
+    "priority": "High",
+    "risk": "Medium",
+    "groups": "manual-api",
+    "method": "",
+    "data": "null"
+  },
+  {
+    "id": "TC-API-002",
+    "req": "REQ-API-001",
+    "scenario": "TS-API-002",
+    "module": "API",
+    "title": "POST /api/productsList \u2014 contract validation",
+    "steps": [
+      [
+        "Set api_base_url to https://automationexercise.com/api.",
+        "The request URL resolves to https://automationexercise.com/api/productsList."
+      ],
+      [
+        "Select HTTP method POST.",
+        "The request method is POST."
+      ],
+      [
+        "Configure form-urlencoded body {}.",
+        "Request data matches the specified form fields; omitted fields stay omitted."
+      ],
+      [
+        "Send the request once.",
+        "HTTP status is 200; parse the body as JSON despite the text/html Content-Type."
+      ],
+      [
+        "Inspect responseCode and response fields.",
+        "Body responseCode is 405; message equals This request method is not supported.."
+      ]
+    ],
+    "kind": "API",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "manual-api",
+    "method": "",
+    "data": "{}"
+  },
+  {
+    "id": "TC-API-003",
+    "req": "REQ-API-001",
+    "scenario": "TS-API-003",
+    "module": "API",
+    "title": "GET /api/brandsList \u2014 contract validation",
+    "steps": [
+      [
+        "Set api_base_url to https://automationexercise.com/api.",
+        "The request URL resolves to https://automationexercise.com/api/brandsList."
+      ],
+      [
+        "Select HTTP method GET.",
+        "The request method is GET."
+      ],
+      [
+        "Leave the request body empty.",
+        "Request data matches the specified form fields; omitted fields stay omitted."
+      ],
+      [
+        "Send the request once.",
+        "HTTP status is 200; parse the body as JSON despite the text/html Content-Type."
+      ],
+      [
+        "Inspect responseCode and response fields.",
+        "Body responseCode is 200; brands array is non-empty; each brand has id and brand."
+      ]
+    ],
+    "kind": "API",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "manual-api",
+    "method": "",
+    "data": "null"
+  },
+  {
+    "id": "TC-API-004",
+    "req": "REQ-API-001",
+    "scenario": "TS-API-004",
+    "module": "API",
+    "title": "PUT /api/brandsList \u2014 contract validation",
+    "steps": [
+      [
+        "Set api_base_url to https://automationexercise.com/api.",
+        "The request URL resolves to https://automationexercise.com/api/brandsList."
+      ],
+      [
+        "Select HTTP method PUT.",
+        "The request method is PUT."
+      ],
+      [
+        "Configure form-urlencoded body {}.",
+        "Request data matches the specified form fields; omitted fields stay omitted."
+      ],
+      [
+        "Send the request once.",
+        "HTTP status is 200; parse the body as JSON despite the text/html Content-Type."
+      ],
+      [
+        "Inspect responseCode and response fields.",
+        "Body responseCode is 405; message equals This request method is not supported.."
+      ]
+    ],
+    "kind": "API",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "manual-api",
+    "method": "",
+    "data": "{}"
+  },
+  {
+    "id": "TC-API-005",
+    "req": "REQ-API-002",
+    "scenario": "TS-API-005",
+    "module": "API",
+    "title": "POST /api/searchProduct \u2014 contract validation",
+    "steps": [
+      [
+        "Set api_base_url to https://automationexercise.com/api.",
+        "The request URL resolves to https://automationexercise.com/api/searchProduct."
+      ],
+      [
+        "Select HTTP method POST.",
+        "The request method is POST."
+      ],
+      [
+        "Configure form-urlencoded body {\"search_product\": \"top\"}.",
+        "Request data matches the specified form fields; omitted fields stay omitted."
+      ],
+      [
+        "Send the request once.",
+        "HTTP status is 200; parse the body as JSON despite the text/html Content-Type."
+      ],
+      [
+        "Inspect responseCode and response fields.",
+        "Body responseCode is 200; products array is non-empty; each returned name contains top, ignoring case."
+      ]
+    ],
+    "kind": "API",
+    "priority": "High",
+    "risk": "Medium",
+    "groups": "manual-api",
+    "method": "",
+    "data": "{\"search_product\": \"top\"}"
+  },
+  {
+    "id": "TC-API-006",
+    "req": "REQ-API-002",
+    "scenario": "TS-API-006",
+    "module": "API",
+    "title": "POST /api/searchProduct \u2014 contract validation",
+    "steps": [
+      [
+        "Set api_base_url to https://automationexercise.com/api.",
+        "The request URL resolves to https://automationexercise.com/api/searchProduct."
+      ],
+      [
+        "Select HTTP method POST.",
+        "The request method is POST."
+      ],
+      [
+        "Configure form-urlencoded body {}.",
+        "Request data matches the specified form fields; omitted fields stay omitted."
+      ],
+      [
+        "Send the request once.",
+        "HTTP status is 200; parse the body as JSON despite the text/html Content-Type."
+      ],
+      [
+        "Inspect responseCode and response fields.",
+        "Body responseCode is 400; message equals Bad request, search_product parameter is missing in POST request.."
+      ]
+    ],
+    "kind": "API",
+    "priority": "High",
+    "risk": "Medium",
+    "groups": "manual-api",
+    "method": "",
+    "data": "{}"
+  },
+  {
+    "id": "TC-API-007",
+    "req": "REQ-API-002",
+    "scenario": "TS-API-007",
+    "module": "API",
+    "title": "POST /api/searchProduct \u2014 empty input",
+    "steps": [
+      [
+        "Set api_base_url to https://automationexercise.com/api.",
+        "The request URL resolves to https://automationexercise.com/api/searchProduct."
+      ],
+      [
+        "Select HTTP method POST.",
+        "The request method is POST."
+      ],
+      [
+        "Configure form-urlencoded body {\"search_product\": \"\"}.",
+        "Request data matches the specified form fields; omitted fields stay omitted."
+      ],
+      [
+        "Send the request once.",
+        "HTTP status is 200; parse the body as JSON despite the text/html Content-Type."
+      ],
+      [
+        "Inspect responseCode and response fields.",
+        "Body responseCode is 200; products is a non-empty array; compare IDs with a fresh productsList response."
+      ]
+    ],
+    "kind": "API",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "manual-api",
+    "method": "",
+    "data": "{\"search_product\": \"\"}"
+  },
+  {
+    "id": "TC-API-008",
+    "req": "REQ-API-002",
+    "scenario": "TS-API-008",
+    "module": "API",
+    "title": "POST /api/verifyLogin \u2014 contract validation",
+    "steps": [
+      [
+        "Set api_base_url to https://automationexercise.com/api.",
+        "The request URL resolves to https://automationexercise.com/api/verifyLogin."
+      ],
+      [
+        "Select HTTP method POST.",
+        "The request method is POST."
+      ],
+      [
+        "Configure form-urlencoded body {}.",
+        "Request data matches the specified form fields; omitted fields stay omitted."
+      ],
+      [
+        "Send the request once.",
+        "HTTP status is 200; parse the body as JSON despite the text/html Content-Type."
+      ],
+      [
+        "Inspect responseCode and response fields.",
+        "Body responseCode is 400; message equals Bad request, email or password parameter is missing in POST request.."
+      ]
+    ],
+    "kind": "API",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "manual-api",
+    "method": "",
+    "data": "{}"
+  },
+  {
+    "id": "TC-API-009",
+    "req": "REQ-API-002",
+    "scenario": "TS-API-009",
+    "module": "API",
+    "title": "DELETE /api/verifyLogin \u2014 contract validation",
+    "steps": [
+      [
+        "Set api_base_url to https://automationexercise.com/api.",
+        "The request URL resolves to https://automationexercise.com/api/verifyLogin."
+      ],
+      [
+        "Select HTTP method DELETE.",
+        "The request method is DELETE."
+      ],
+      [
+        "Leave the request body empty.",
+        "Request data matches the specified form fields; omitted fields stay omitted."
+      ],
+      [
+        "Send the request once.",
+        "HTTP status is 200; parse the body as JSON despite the text/html Content-Type."
+      ],
+      [
+        "Inspect responseCode and response fields.",
+        "Body responseCode is 405; message equals This request method is not supported.."
+      ]
+    ],
+    "kind": "API",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "manual-api",
+    "method": "",
+    "data": "null"
+  },
+  {
+    "id": "TC-MAN-001",
+    "req": "REQ-AUTH-001",
+    "scenario": "TS-MAN-001",
+    "module": "Exploratory",
+    "title": "Login is reachable using keyboard navigation",
+    "steps": [
+      [
+        "Open /login in headed Chrome.",
+        "Login and signup forms are visible."
+      ],
+      [
+        "Use Tab to reach the login email field.",
+        "A visible focus indication reaches the email field."
+      ],
+      [
+        "Use Tab to reach password and Login.",
+        "Focus reaches password then Login without a keyboard trap."
+      ]
+    ],
+    "kind": "MAN",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "manual",
+    "method": "",
+    "data": "No credentials entered."
+  },
+  {
+    "id": "TC-MAN-002",
+    "req": "REQ-CAT-001",
+    "scenario": "TS-MAN-002",
+    "module": "Exploratory",
+    "title": "Catalog usability at a narrow viewport",
+    "steps": [
+      [
+        "Set Chrome viewport to 390 by 844 pixels.",
+        "The viewport has the requested dimensions."
+      ],
+      [
+        "Open /products.",
+        "The search field and product content can be reached by scrolling."
+      ],
+      [
+        "Inspect search and product card controls.",
+        "Controls remain readable and operable without being covered by overlapping content."
+      ]
+    ],
+    "kind": "MAN",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "manual",
+    "method": "",
+    "data": "390 x 844 CSS pixels; visual assessment; screenshots required."
+  },
+  {
+    "id": "TC-MAN-003",
+    "req": "REQ-CART-001",
+    "scenario": "TS-MAN-003",
+    "module": "Exploratory",
+    "title": "Investigate zero and negative quantity behavior",
+    "steps": [
+      [
+        "Open /product_details/1 in a fresh guest session.",
+        "Blue Top quantity is 1."
+      ],
+      [
+        "Set quantity to 0 and inspect browser validity before attempting Add to cart.",
+        "Record validity and whether the application accepts the value; acceptance is a business-rule question, not an assumed defect."
+      ],
+      [
+        "Repeat with -1 in a new session.",
+        "Record validity, cart quantity and total if accepted; raise a requirement question if positivity is not enforced."
+      ]
+    ],
+    "kind": "MAN",
+    "priority": "Medium",
+    "risk": "Medium",
+    "groups": "manual",
+    "method": "",
+    "data": "0 and -1; exploratory charter; no fabricated acceptance criterion."
+  }
+]
