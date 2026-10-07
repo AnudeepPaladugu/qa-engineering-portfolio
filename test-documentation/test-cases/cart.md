@@ -96,3 +96,34 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Execution date: 2026-10-07T11:01:38.011742500Z
 - Executed by: Codex automated Chrome execution
 - Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+
+## TC-UI-021 — Reject a quantity below the declared minimum
+
+- Requirement ID: REQ-CART-004
+- Scenario ID: TS-UI-021
+- Module: Cart
+- Objective: Preserve a regression guard for the observed quantity validation defect.
+- Preconditions: Fresh guest Chrome session; demo reachable; no account or password required.
+- Test data: Product 1 Blue Top at Rs. 500; quantity -1.
+- Priority: High
+- Severity if failed: High
+- Risk: High
+- Test type: UI / negative boundary regression
+- Environment: https://automationexercise.com; shared public demo; build not exposed
+- Browser: Chrome 155.0.8059.39
+- Groups: smoke, regression, critical, ui
+- Automation: PortfolioTests.rejectNegativeQuantity
+
+| Step | Action | Expected result |
+|---|---|---|
+| 1 | Navigate to /product_details/1. | Blue Top is displayed; Quantity has min=1. |
+| 2 | Set Quantity to -1. | The field contains -1, below the declared minimum. |
+| 3 | Click Add to cart and wait for request completion. | The below-minimum quantity is rejected; successful addition is not required by the test. |
+| 4 | Navigate to /view_cart. | The cart remains empty; no negative-quantity row or negative line total is persisted. |
+
+- Actual result: The field declared min=1; -1 was entered and persisted after the request completed. Cart displayed Blue Top, quantity -1 and Rs. -500.
+- Status: FAIL
+- Defect ID: QA-PROD-001 (OPEN)
+- Execution date: 2026-10-07T11:25:45.024429500Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/exploratory/quantity-synchronized--1.png; runtime guard failure screenshot/logs and Allure failed result under artifacts/

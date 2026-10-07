@@ -36,3 +36,5 @@ Design baseline. All 32 case outcomes are recorded: 31 PASS and one boundary FAI
 | REQ-AUTH-001 | TS-MAN-001 | TC-MAN-001 | Agent-assisted exploratory inspection | PASS | None recorded | evidence/exploratory/results.json |
 | REQ-CAT-001 | TS-MAN-002 | TC-MAN-002 | Agent-assisted exploratory inspection | PASS | None recorded | evidence/exploratory/results.json |
 | REQ-CART-004 | TS-MAN-003 | TC-MAN-003 | Agent-assisted exploratory inspection | FAIL | QA-PROD-001 | evidence/exploratory/results.json |
+
+| REQ-CART-004 | TS-UI-021 | TC-UI-021 | PortfolioTests.rejectNegativeQuantity | FAIL | QA-PROD-001 OPEN | evidence/exploratory; runtime Allure failed guard |

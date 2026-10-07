@@ -12,6 +12,6 @@
 - Evidence: evidence/exploratory/quantity-first-observation.txt, quantity-reproduction.txt and quantity-synchronized--1.png.
 - Logs: The saved observations include DOM min, browser validity, request completion, modal presence and exact cart text.
 - Status: OPEN / reported in this portfolio; not submitted to the website owner, and not fixed in the third-party application.
-- Related requirement/case: REQ-CART-004 / TC-MAN-003.
+- Related requirement/case: REQ-CART-004 / TC-MAN-003 and TC-UI-021.
 
 No real payment was made and no claim is made about backend settlement. The finding is limited to observed cart validation and displayed totals. The previous undefined-boundary charter was revised transparently after inspecting the actual min=1 constraint.

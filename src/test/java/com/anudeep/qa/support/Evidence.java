@@ -84,6 +84,9 @@ public final class Evidence {
   }
 
   public static void finish(String status, long duration, Throwable failure) {
+    while (failure instanceof java.lang.reflect.InvocationTargetException && failure.getCause() != null) {
+      failure = failure.getCause();
+    }
     Context c = CURRENT.get();
     if (c == null) return;
     writeLog("COMPLETE", status, failure);

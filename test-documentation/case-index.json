@@ -1450,5 +1450,36 @@
     "groups": "manual",
     "method": "",
     "data": "0 and -1; exploratory charter; no fabricated acceptance criterion."
+  },
+  {
+    "id": "TC-UI-021",
+    "req": "REQ-CART-004",
+    "scenario": "TS-UI-021",
+    "module": "Cart",
+    "title": "Reject a quantity below the declared minimum",
+    "steps": [
+      [
+        "Navigate to /product_details/1.",
+        "Blue Top is displayed; Quantity has min=1."
+      ],
+      [
+        "Set Quantity to -1.",
+        "The field contains -1, below the declared minimum."
+      ],
+      [
+        "Click Add to cart and wait for request completion.",
+        "The below-minimum quantity is rejected; successful addition is not required by the test."
+      ],
+      [
+        "Navigate to /view_cart.",
+        "The cart remains empty; no negative-quantity row or negative line total is persisted."
+      ]
+    ],
+    "kind": "UI",
+    "priority": "High",
+    "risk": "High",
+    "groups": "smoke,regression,critical,ui",
+    "method": "rejectNegativeQuantity",
+    "data": "Fresh guest session; product 1 at Rs. 500; quantity -1."
   }
 ]

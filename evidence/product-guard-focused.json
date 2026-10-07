@@ -1,0 +1,16 @@
+{
+  "caseId": "TC-UI-021",
+  "status": "FAIL",
+  "timestampUtc": "2026-10-07T11:25:45.024429500Z",
+  "actual": "Blue Top quantity -1; line total Rs. -500 despite min=1",
+  "defect": "QA-PROD-001 OPEN",
+  "mavenExit": 1,
+  "allureStatus": "failed",
+  "attachmentNames": [
+    "TC-UI-021_rejectNegativeQuantity_START_20261007_112537_292.png",
+    "TC-UI-021_rejectNegativeQuantity_BEFORE_NEGATIVE_ADD_20261007_112537_292.png",
+    "TC-UI-021_rejectNegativeQuantity_FAIL_20261007_112537_292.png",
+    "Structured execution log",
+    "Failure"
+  ]
+}

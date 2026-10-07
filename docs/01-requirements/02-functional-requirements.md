@@ -209,5 +209,5 @@ Source references: [application discovery](../00-discovery/application-inspectio
 - Acceptance criteria: Values below the declared minimum must not create a zero/negative-quantity cart row; quantity 1 creates the inspected Rs. 500 line.
 - Dependencies: REQ-CAT-003; REQ-CART-001
 - Testable: Yes
-- Related test cases: TC-MAN-003
+- Related test cases: TC-MAN-003; TC-UI-021
 - Current outcome: FAIL; QA-PROD-001 remains open in the third-party application.

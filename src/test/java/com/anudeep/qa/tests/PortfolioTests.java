@@ -282,4 +282,23 @@ public class PortfolioTests extends BaseTest {
     Assert.assertTrue(catalog.names().contains("Blue Top"));
     observed("Brand heading=" + catalog.heading() + "; names=" + catalog.names());
   }
+
+  @Test(groups = {"smoke", "regression", "critical", "ui"})
+  @CaseId("TC-UI-021")
+  @Severity(SeverityLevel.CRITICAL)
+  @Description("Cart addition must respect the product field's declared minimum of one; tracks QA-PROD-001")
+  public void rejectNegativeQuantity() {
+    product.openBlueTop();
+    Assert.assertEquals(product.minimum(), "1", "Declared quantity minimum changed");
+    product.quantity("-1");
+    Assert.assertEquals(product.quantity(), "-1");
+    Evidence.checkpoint("BEFORE_NEGATIVE_ADD");
+    product.attemptAddInvalidQuantity();
+    cart.open();
+    String actual = cart.bodyText();
+    observed("After adding quantity -1, cart text=" + actual);
+    Assert.assertTrue(
+        actual.contains("Cart is empty!"),
+        "QA-PROD-001: below-minimum quantity must not persist in cart. Actual: " + actual);
+  }
 }

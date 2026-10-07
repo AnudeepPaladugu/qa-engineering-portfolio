@@ -20,6 +20,10 @@ public class ProductPage extends BasePage {
     return value(By.id("quantity"));
   }
 
+  public String minimum() {
+    return visible(By.id("quantity")).getDomAttribute("min");
+  }
+
   public void quantity(String value) {
     type(By.id("quantity"), value);
   }
@@ -27,5 +31,13 @@ public class ProductPage extends BasePage {
   public void add() {
     click(By.cssSelector("button.cart"));
     waitText("Your product has been added to cart.");
+  }
+
+  public void attemptAddInvalidQuantity() {
+    click(By.cssSelector("button.cart"));
+    // The negative path must not require a success modal: a future rejection is valid.
+    wait.until(
+        d -> Boolean.TRUE.equals(((JavascriptExecutor) d).executeScript(
+            "return typeof jQuery !== 'undefined' && jQuery.active === 0")));
   }
 }
