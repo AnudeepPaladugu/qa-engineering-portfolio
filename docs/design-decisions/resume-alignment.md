@@ -10,7 +10,7 @@ The owner requested that this project use skills listed in their resume and avoi
 | SQL and database validation | SQL validation design for an owned environment; public DB access is unavailable |
 | Allure Reports | Test results with screenshots and failure details |
 | Git | Incremental validated commits |
-| Jenkins | A simple pipeline definition; actual execution requires an available Jenkins instance |
+| Jenkins | Deferred at the owner's request because no Jenkins server is connected |
 | Jira, Zephyr, Agile/Scrum | Portable defect/test records suitable for importing; no claim of integration with a live Jira project |
 
 REST Assured and GitHub Actions are removed from the implementation scope because the resume lists manual Postman API testing and Jenkins. Cucumber and Testim are listed but are not required for every project; adding a second UI execution layer would duplicate this project's TestNG cases. AI chatbot testing is outside scope because this application has no chatbot.

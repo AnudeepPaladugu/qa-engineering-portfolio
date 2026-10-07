@@ -1,6 +1,6 @@
 # Checkout detailed cases
 
-Status baseline: NOT EXECUTED. Test execution must record an observed result, timestamp and evidence rather than copy the expected result.
+Records below contain the latest observed results, timestamps and evidence. The original design baseline was NOT EXECUTED.
 
 ## TC-UI-014 — Guest checkout is gated by registration or login
 
@@ -27,20 +27,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Navigate to /view_cart. | The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000. |
 | 5 | Click Proceed To Checkout. | The checkout modal displays Register / Login account to proceed on checkout. and the Register / Login link. |
 
-- Actual result: Guest checkout modal=
-Checkout
-Register / Login account to proceed on checkout.
-Register / Login
-Continue On Cart
-Checkout
-Register / Login account to proceed on checkout.
-Register / Login
-Continue On Cart
+- Actual result: Guest checkout modal= / Checkout / Register / Login account to proceed on checkout. / Register / Login / Continue On Cart
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:03:14.311381600Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:30:03.013675400Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-015 — Authenticated review carries address and cart total
 
@@ -84,24 +76,12 @@ Continue On Cart
 | 21 | Read the delivery address. | It contains QA Portfolio, Test Street, Vijayawada Andhra Pradesh 520001 and India. |
 | 22 | Read the order review and total. | The Blue Top row shows quantity 2 and Rs. 1000; Total Amount is Rs. 1000. |
 
-- Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Checkout delivery address=YOUR DELIVERY ADDRESS
-. QA Portfolio
-Test Street
-Vijayawada Andhra Pradesh 520001
-India
-9999999999; review=Item Description Price Quantity Total
-Blue Top
-Women > Tops
-Rs. 500
-2
-Rs. 1000
-Total Amount
-Rs. 1000
+- Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Checkout delivery address=YOUR DELIVERY ADDRESS / . QA Portfolio / Test Street / Vijayawada Andhra Pradesh 520001 / India / 9999999999; review=Item Description Price Quantity Total / Blue Top / Women > Tops / Rs. 500 / 2 / Rs. 1000 / Total Amount / Rs. 1000
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:02:20.652689Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:29:11.388087800Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-016 — Submit a simulated order using synthetic payment data
 
@@ -153,9 +133,9 @@ Rs. 1000
 - Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Confirmation URL=/payment_done/1000; ORDER PLACED!; Congratulations! Your order has been confirmed!
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:02:42.845027100Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:29:32.438359600Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-017 — Missing name prevents payment submission
 
@@ -203,6 +183,6 @@ Rs. 1000
 - Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Name on Card validity.valueMissing=true; URL path=/payment
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:04:03.178233700Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:30:58.849606300Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified

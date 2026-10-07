@@ -9,3 +9,5 @@
 | API responseCode is distinct from HTTP status | Direct discovery; validation requests returned HTTP 200 | TC-API-001 through 009 |
 
 Do not infer tax, shipping, refund, inventory decrement, genuine payment processing or order-history rules. No accessible product-owner specification defines accepted quantity bounds; TC-MAN-003 investigates zero/negative values without manufacturing a confirmed defect.
+
+Later DOM inspection found an explicit min=1 on the quantity input. REQ-CART-004 now tracks that inferred UI validation contract; synchronized exploratory execution and its automated guard fail with negative totals. Product-owner confirmation is still needed for final business-rule disposition.

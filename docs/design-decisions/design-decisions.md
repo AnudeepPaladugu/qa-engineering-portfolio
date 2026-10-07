@@ -14,7 +14,7 @@
 | Smoke / regression | Smoke concentrates on seven critical checks; regression contains all 20 UI cases |
 | Manual Postman API work | Matches the resume's manual REST API skill; no REST Assured dependency is added |
 | SQL design only | Public database is unavailable; an unexecuted owned-environment example cannot imply actual DB validation |
-| Jenkins definition | Matches the resume; execution remains NOT VERIFIED without an actual Jenkins server |
+| CI deferred | Jenkins skipped at the owner's request because no server is connected |
 | No Cucumber/Testim layer | They are resume skills, but adding both would duplicate this small TestNG suite |
 | No automatic retries | Preserves failures and avoids turning intermittent behavior into unexplained passes |
 | Manual exploratory checks | Keyboard and visual usability need observation; undefined quantity limits need a requirement decision |

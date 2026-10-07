@@ -1,6 +1,6 @@
 # Catalog detailed cases
 
-Status baseline: NOT EXECUTED. Test execution must record an observed result, timestamp and evidence rather than copy the expected result.
+Records below contain the latest observed results, timestamps and evidence. The original design baseline was NOT EXECUTED.
 
 ## TC-UI-007 — Catalog exposes named product cards
 
@@ -24,16 +24,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 1 | Navigate to /products. | ALL PRODUCTS is visible and at least one product card is displayed. |
 | 2 | Inspect the Blue Top card. | The card displays Blue Top and Rs. 500. |
 
-- Actual result: Catalog heading=ALL PRODUCTS; Blue Top card=Rs. 500
-Blue Top
-Add to cart
-Blue Top
-Add to cart
+- Actual result: Catalog heading=ALL PRODUCTS; Blue Top card=Rs. 500 / Blue Top / Add to cart
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:01:54.766863500Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:28:48.535395Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-008 — Search for top includes name and category matches
 
@@ -59,12 +55,12 @@ Add to cart
 | 3 | Click the search button. | SEARCHED PRODUCTS is visible and at least one matching product is displayed. |
 | 4 | Read each returned product name. | Returned names include Blue Top (name match) and Little Girls Mr. Panda Shirt (observed Tops & Shirts category match). |
 
-- Actual result: top search returned 14 products, including Blue Top and the Tops & Shirts category item Little Girls Mr. Panda Shirt: [Blue Top, Winter Top, Summer White Top, Madame Top For Women, Fancy Green Top, Sleeves Printed Top - White, Half Sleeves Top Schiffli Detailing - Pink, Frozen Tops For Kids, Full Sleeves Top Cherry - Pink, Printed Off Shoulder Top - White, Sleeves Top and Short - Blue & Pink, Little Girls Mr. Panda Shirt, Colour Blocked Shirt – Sky BlueBrowse Clothing, Lace Top For Women]
+- Actual result: top search returned 14 products, including Blue Top and the Tops & Shirts category item Little Girls Mr. Panda Shirt: [Blue Top, Winter Top, Summer White Top, Madame Top For Women, Fancy Green Top, Sleeves Printed Top - WhiteSource Suppliers, Half Sleeves Top Schiffli Detailing - Pink, Frozen Tops For Kids, Full Sleeves Top Cherry - Pink, Printed Off Shoulder Top - White, Sleeves Top and Short - Blue & Pink, Little Girls Mr. Panda Shirt, Colour Blocked Shirt – Sky BlueBrowse Clothing, Lace Top For Women]
 - Status: PASS
-- Defect ID: QA-DES-001 (fixed test-design defect; initial failure retained)
-- Execution date: 2026-10-07T11:04:53.326451900Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Defect ID: QA-DES-001 fixed (historical)
+- Execution date: 2026-10-07T11:31:53.134825100Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-009 — Unknown search has no product cards
 
@@ -92,9 +88,9 @@ Add to cart
 - Actual result: SEARCHED PRODUCTS displayed with zero product cards
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:04:45.052281700Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:31:45.870371900Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-010 — Product detail exposes the inspected item attributes
 
@@ -119,18 +115,12 @@ Add to cart
 | 2 | Read the product price and attributes. | Price is Rs. 500; Availability is In Stock; Condition is New; Brand is Polo. |
 | 3 | Inspect the quantity field. | Its initial value is 1. |
 
-- Actual result: Product details=Blue Top
-Category: Women > Tops
-Rs. 500
-Quantity: Add to cart
-Availability: In Stock
-Condition: New
-Brand: Polo; initial quantity=1
+- Actual result: Product details=Blue Top / Category: Women > Tops / Rs. 500 / Quantity: Add to cart / Availability: In Stock / Condition: New / Brand: Polo; initial quantity=1
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:04:08.915912100Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:31:05.066943100Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-019 — Women Tops category exposes its catalog subset
 
@@ -154,12 +144,12 @@ Brand: Polo; initial quantity=1
 | 1 | Navigate to /category_products/2. | WOMEN - TOPS PRODUCTS is visible. |
 | 2 | Read the category product cards. | At least one card is visible and Blue Top is present. |
 
-- Actual result: Category heading=WOMEN - TOPS PRODUCTS; names=[Blue Top, Winter Top, Summer White Top, Madame Top For Women, Fancy Green Top, Lace Top For Women]
+- Actual result: Category heading=WOMEN - TOPS PRODUCTS; names=[Blue Top, Winter Top, Summer White Top, Madame Top For WomenSupport Causes, Fancy Green Top, Lace Top For Women]
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:02:00.799427600Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:28:53.430808500Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-020 — Polo brand filter exposes its catalog subset
 
@@ -186,6 +176,6 @@ Brand: Polo; initial quantity=1
 - Actual result: Brand heading=BRAND - POLO PRODUCTS; names=[Blue Top, Fancy Green Top, Green Side Placket Detail  T-Shirt, Premium Polo  T-Shirts, Soft Stretch Jeans, Grunt Blue Slim Fit Jeans]
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:01:28.838803600Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:28:26.307875500Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified

@@ -1,6 +1,6 @@
 # Cart detailed cases
 
-Status baseline: NOT EXECUTED. Test execution must record an observed result, timestamp and evidence rather than copy the expected result.
+Records below contain the latest observed results, timestamps and evidence. The original design baseline was NOT EXECUTED.
 
 ## TC-UI-011 — Quantity two produces the correct line total
 
@@ -29,9 +29,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: Cart Blue Top: unit=Rs. 500; quantity=2; total=Rs. 1000
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:01:46.373354200Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:28:41.703895500Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-012 — Remove the only item from the cart
 
@@ -61,9 +61,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: Deleted Blue Top row; Cart is empty! displayed
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:04:30.865251700Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:31:33.825701900Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-013 — Cart contents survive a same-session refresh
 
@@ -93,9 +93,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: After refresh: quantity=2; total=Rs. 1000
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:01:38.011742500Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:28:34.682297300Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-021 — Reject a quantity below the declared minimum
 
@@ -121,9 +121,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 3 | Click Add to cart and wait for request completion. | The below-minimum quantity is rejected; successful addition is not required by the test. |
 | 4 | Navigate to /view_cart. | The cart remains empty; no negative-quantity row or negative line total is persisted. |
 
-- Actual result: The field declared min=1; -1 was entered and persisted after the request completed. Cart displayed Blue Top, quantity -1 and Rs. -500.
+- Actual result: After adding quantity -1, cart text=Home /  Products / Cart / Signup / Login / Test Cases / API Testing / Video Tutorials / Contact us / Home Shopping Cart / Proceed To Checkout / Item Description Price Quantity Total / Blue Top / Women > Tops / Rs. 500 / -1 / Rs. -500 /  /  / SUBSCRIPTION / Get the most recent updates from / our site and be updated your self... / Copyright © 2021 All rights reserved
 - Status: FAIL
-- Defect ID: QA-PROD-001 (OPEN)
-- Execution date: 2026-10-07T11:25:45.024429500Z
+- Defect ID: QA-PROD-001 OPEN
+- Execution date: 2026-10-07T11:31:25.540827600Z
 - Executed by: Codex real Chrome execution
-- Evidence location: evidence/exploratory/quantity-synchronized--1.png; runtime guard failure screenshot/logs and Allure failed result under artifacts/
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified

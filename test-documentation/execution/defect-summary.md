@@ -1,10 +1,10 @@
 # Defect summary
 
-| ID | Classification | Actual finding | Current status |
+| ID | Classification | Finding | Status |
 |---|---|---|---|
-| QA-FW-001 | Framework | Listener outcome attachments were missing from Allure test entries | FIXED AND VERIFIED; all 20 regression entries have outcome attachments |
-| QA-DES-001 | Test design | Search assertion assumed name-only matching despite category matches | FIXED AND VERIFIED; focused and full regression search passed |
+| QA-PROD-001 | Application / High | Values below min=1 persist; -1 yields a Rs. -500 cart total | OPEN; TC-UI-021 and TC-MAN-003 FAIL |
+| QA-FW-001 | Framework | Listener attachment timing missed active Allure test entries | FIXED AND VERIFIED |
+| QA-DES-001 | Test design | Search expectation ignored category matches | FIXED AND VERIFIED |
+| QA-PM-001 | Collection | Test-script variable collided with Postman globals | FIXED AND VERIFIED |
 
-No reproducible application defect was identified in the executed UI scope. The first 19/20 run remains in evidence/initial-regression/results.json. Quantity boundaries still require the exploratory charter and requirement clarification.
-
-Latest exploratory finding: **QA-PROD-001 OPEN / High** — below-minimum quantity creates a negative cart total. This supersedes the earlier UI-only no-product-defect statement. Two independent reproductions and screenshots are retained.
+One open application defect causes the NO-GO recommendation. Three project defects were corrected without relabeling their original failed runs. No website source fix or owner notification is claimed. See the individual defect records for exact reproduction, expected/actual results, evidence and scope limitations.

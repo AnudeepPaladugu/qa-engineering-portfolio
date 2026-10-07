@@ -1,6 +1,6 @@
 # API detailed cases
 
-Status baseline: NOT EXECUTED. Test execution must record an observed result, timestamp and evidence rather than copy the expected result.
+Records below contain the latest observed results, timestamps and evidence. The original design baseline was NOT EXECUTED.
 
 ## TC-API-001 — GET /api/productsList — contract validation
 

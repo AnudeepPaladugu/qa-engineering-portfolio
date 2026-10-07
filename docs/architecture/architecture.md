@@ -11,8 +11,6 @@ flowchart TD
     Listener --> Screenshots
     Listener --> Logs[Structured logs and result JSON]
     Listener --> Allure
-    Jenkins --> Maven
-    Jenkins --> Archive[Archived evidence and reports]
     Postman --> API[Manual practice API cases]
 ```
 

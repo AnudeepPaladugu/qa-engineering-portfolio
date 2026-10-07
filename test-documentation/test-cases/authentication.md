@@ -1,6 +1,6 @@
 # Authentication detailed cases
 
-Status baseline: NOT EXECUTED. Test execution must record an observed result, timestamp and evidence rather than copy the expected result.
+Records below contain the latest observed results, timestamps and evidence. The original design baseline was NOT EXECUTED.
 
 ## TC-UI-001 â€” Login form exposes required and masked inputs
 
@@ -28,9 +28,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: /login rendered; email/password required=true; password type=password
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:03:26.407833900Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:30:14.246294300Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-002 â€” Unknown account receives the actual login error
 
@@ -59,9 +59,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: Observed login error: Your email or password is incorrect!; URL path=/login
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:03:21.378818700Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:30:09.029225100Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-003 â€” Blank email blocks form submission
 
@@ -89,9 +89,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: Blank email validity.valueMissing=true; URL path=/login
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:04:37.432742300Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:31:38.922457Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-004 â€” Create a synthetic account through the UI
 
@@ -131,9 +131,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Registration completed; navigation displays Logged in as QA Portfolio
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:04:20.836662700Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:31:17.761002800Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-005 â€” Authenticate with a newly created account
 
@@ -177,9 +177,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Login accepted registered credentials; navigation displays Logged in as QA Portfolio
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:05:16.160644100Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:32:12.240145400Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-006 â€” Logout removes the authenticated navigation
 
@@ -220,9 +220,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Logout navigated to /login; authenticated name absent; Signup / Login visible
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:03:40.525706300Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:30:31.114640700Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
 
 ## TC-UI-018 â€” Duplicate signup rejects an existing address
 
@@ -266,6 +266,6 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Duplicate signup displayed: Email Address already exist!; URL=/signup
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T11:03:00.245298800Z
-- Executed by: Codex automated Chrome execution
-- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
+- Execution date: 2026-10-07T11:29:49.377161300Z
+- Executed by: Codex real Chrome execution
+- Evidence location: evidence/latest-regression/results.json; runtime Allure screenshots/logs verified
