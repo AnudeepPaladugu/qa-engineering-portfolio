@@ -1,0 +1,32 @@
+[
+  {
+    "caseId": "TC-MAN-001",
+    "status": "PASS",
+    "actual": "In headed Chrome, Tab reached login-email, then login-password and login-button without a trap. Before/after element screenshots show a visible text caret in the focused email field. This is a focused keyboard check, not an accessibility certification.",
+    "timestampUtc": "2026-10-07T11:19:55.107774+00:00",
+    "executor": "Codex agent-assisted exploratory inspection and screenshot review",
+    "client": "Chrome 155.0.8059.39 / Windows",
+    "evidence": "evidence/exploratory",
+    "defect": null
+  },
+  {
+    "caseId": "TC-MAN-002",
+    "status": "PASS",
+    "actual": "Viewport measured 390x844 CSS pixels. Agent visual review of the search and product screenshots found readable, unobscured search/button controls and the Blue Top card, Rs. 500 price and Add to cart control, reachable by vertical scrolling. This is a limited visual assessment, not device coverage.",
+    "timestampUtc": "2026-10-07T11:19:55.107774+00:00",
+    "executor": "Codex agent-assisted exploratory inspection and screenshot review",
+    "client": "Chrome 155.0.8059.39 / Windows",
+    "evidence": "evidence/exploratory",
+    "defect": null
+  },
+  {
+    "caseId": "TC-MAN-003",
+    "status": "FAIL",
+    "actual": "Quantity DOM min=1. Both 0 and -1 have rangeUnderflow=true but display the Added modal and persist in cart after request completion. Zero produces Rs. 0; -1 produces Rs. -500. Positive control 1 produces Rs. 500. Negative case reproduced in two independent sessions.",
+    "timestampUtc": "2026-10-07T11:19:55.107774+00:00",
+    "executor": "Codex agent-assisted exploratory inspection and screenshot review",
+    "client": "Chrome 155.0.8059.39 / Windows",
+    "evidence": "evidence/exploratory",
+    "defect": "QA-PROD-001"
+  }
+]

@@ -1414,27 +1414,39 @@
   },
   {
     "id": "TC-MAN-003",
-    "req": "REQ-CART-001",
+    "req": "REQ-CART-004",
     "scenario": "TS-MAN-003",
     "module": "Exploratory",
-    "title": "Investigate zero and negative quantity behavior",
+    "title": "Enforce the declared quantity minimum before cart addition",
     "steps": [
       [
-        "Open /product_details/1 in a fresh guest session.",
-        "Blue Top quantity is 1."
+        "Navigate to /product_details/1.",
+        "Blue Top quantity defaults to 1 and the input declares min=1."
       ],
       [
-        "Set quantity to 0 and inspect browser validity before attempting Add to cart.",
-        "Record validity and whether the application accepts the value; acceptance is a business-rule question, not an assumed defect."
+        "Set quantity to 0.",
+        "The input validity.rangeUnderflow is true."
       ],
       [
-        "Repeat with -1 in a new session.",
-        "Record validity, cart quantity and total if accepted; raise a requirement question if positivity is not enforced."
+        "Click Add to cart and wait for the application request to finish.",
+        "The invalid quantity is not added to the cart; no successful addition should be represented for a quantity below the declared minimum."
+      ],
+      [
+        "Navigate to /view_cart.",
+        "The fresh-session cart has no Blue Top row with zero quantity."
+      ],
+      [
+        "Repeat the steps in a new session with quantity -1.",
+        "The input is below min=1; no negative-quantity row or negative line total is created."
+      ],
+      [
+        "Use a new session and repeat with quantity 1 as a positive control.",
+        "Blue Top is added with quantity 1 and line total Rs. 500."
       ]
     ],
     "kind": "MAN",
-    "priority": "Medium",
-    "risk": "Medium",
+    "priority": "High",
+    "risk": "High",
     "groups": "manual",
     "method": "",
     "data": "0 and -1; exploratory charter; no fabricated acceptance criterion."

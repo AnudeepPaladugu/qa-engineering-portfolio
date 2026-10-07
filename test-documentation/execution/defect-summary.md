@@ -6,3 +6,5 @@
 | QA-DES-001 | Test design | Search assertion assumed name-only matching despite category matches | FIXED AND VERIFIED; focused and full regression search passed |
 
 No reproducible application defect was identified in the executed UI scope. The first 19/20 run remains in evidence/initial-regression/results.json. Quantity boundaries still require the exploratory charter and requirement clarification.
+
+Latest exploratory finding: **QA-PROD-001 OPEN / High** — below-minimum quantity creates a negative cart total. This supersedes the earlier UI-only no-product-defect statement. Two independent reproductions and screenshots are retained.

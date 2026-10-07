@@ -1,6 +1,6 @@
 # Requirement traceability matrix
 
-Design baseline. All 20 UI and nine Postman case outcomes are recorded; three manual charters remain NOT EXECUTED. Discovery is recorded separately.
+Design baseline. All 32 case outcomes are recorded: 31 PASS and one boundary FAIL. The quantity minimum requirement was added to the discovery-derived baseline after direct DOM inspection. Discovery is recorded separately.
 
 | Requirement | Scenario | Case | Automation / mode | Result | Defect | Evidence |
 |---|---|---|---|---|---|---|
@@ -33,6 +33,6 @@ Design baseline. All 20 UI and nine Postman case outcomes are recorded; three ma
 | REQ-API-002 | TS-API-007 | TC-API-007 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
 | REQ-API-002 | TS-API-008 | TC-API-008 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
 | REQ-API-002 | TS-API-009 | TC-API-009 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
-| REQ-AUTH-001 | TS-MAN-001 | TC-MAN-001 | manual | NOT EXECUTED | None recorded | Pending |
-| REQ-CAT-001 | TS-MAN-002 | TC-MAN-002 | manual | NOT EXECUTED | None recorded | Pending |
-| REQ-CART-001 | TS-MAN-003 | TC-MAN-003 | manual | NOT EXECUTED | None recorded | Pending |
+| REQ-AUTH-001 | TS-MAN-001 | TC-MAN-001 | Agent-assisted exploratory inspection | PASS | None recorded | evidence/exploratory/results.json |
+| REQ-CAT-001 | TS-MAN-002 | TC-MAN-002 | Agent-assisted exploratory inspection | PASS | None recorded | evidence/exploratory/results.json |
+| REQ-CART-004 | TS-MAN-003 | TC-MAN-003 | Agent-assisted exploratory inspection | FAIL | QA-PROD-001 | evidence/exploratory/results.json |

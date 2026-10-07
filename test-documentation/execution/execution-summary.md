@@ -32,3 +32,7 @@ QA recommendation: **CONDITIONAL GO for the executed customer UI scope**. The 20
 Nine API cases passed through the official Newman 6.2.1 collection runner: 40 assertions, zero failures, 7.765 seconds total. The request/response observations and collection SHA-256 are in evidence/postman/results.json. Two initial script failures were fixed and retained under QA-PM-001. This does not claim manual execution in the Postman GUI.
 
 Latest planned-case totals: PASS 29, FAIL 0, BLOCKED 0, SKIPPED 0, NOT EXECUTED 3 (exploratory charters). Executed-case pass rate 29/29 = 100%; case execution coverage 29/32 = 90.625%. All 18 defined functional requirements now have executed checks. Jenkins and database execution remain unavailable.
+
+## Final exploratory outcome (supersedes interim recommendation)
+
+Keyboard/focus and narrow-viewport review passed. The synchronized boundary test failed: the UI declares min=1, but quantities 0 and -1 persist; -1 displays Rs. -500. QA-PROD-001 is OPEN and negative quantity reproduced in two independent sessions. Latest totals: 31 PASS / 1 FAIL / 0 BLOCKED / 0 SKIPPED / 0 NOT EXECUTED across 32 cases. Pass rate 96.875%, fail rate 3.125%. Recommendation: **NO-GO for release confidence** because the monetary validation defect outweighs the otherwise passing automated scope.

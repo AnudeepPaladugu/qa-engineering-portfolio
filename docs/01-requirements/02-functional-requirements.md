@@ -199,3 +199,15 @@ Source references: [application discovery](../00-discovery/application-inspectio
 - Dependencies: REQ-API-001
 - Testable: Yes
 - Related test cases: TC-API-005, TC-API-006, TC-API-007, TC-API-008, TC-API-009
+
+## REQ-CART-004: Enforce the declared quantity minimum
+
+- Description: Cart addition should respect the product input's declared minimum of 1.
+- Source: Direct DOM inspection (`type=number`, `min=1`) and synchronized exploratory execution on 7 October 2026. This is an inferred UI validation contract, not a product-owner-approved specification. The initial open boundary question is now backed by an exposed minimum.
+- Priority: High
+- Business risk: Zero or negative quantities produce zero or negative purchase totals.
+- Acceptance criteria: Values below the declared minimum must not create a zero/negative-quantity cart row; quantity 1 creates the inspected Rs. 500 line.
+- Dependencies: REQ-CAT-003; REQ-CART-001
+- Testable: Yes
+- Related test cases: TC-MAN-003
+- Current outcome: FAIL; QA-PROD-001 remains open in the third-party application.

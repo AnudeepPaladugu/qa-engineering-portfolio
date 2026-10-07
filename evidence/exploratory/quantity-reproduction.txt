@@ -1,0 +1,26 @@
+Synchronized quantity inspection at 2026-10-07T11:18:33.777901200Z
+Quantity -1: DOM min=1; rangeUnderflow=true
+AJAX idle; Added modal visible=true
+Cart after quantity -1:
+Home
+ Products
+Cart
+Signup / Login
+Test Cases
+API Testing
+Video Tutorials
+Contact us
+Home Shopping Cart
+Proceed To Checkout
+Item Description Price Quantity Total
+Blue Top
+Women > Tops
+Rs. 500
+-1
+Rs. -500
+
+
+SUBSCRIPTION
+Get the most recent updates from
+our site and be updated your self...
+Copyright © 2021 All rights reserved
