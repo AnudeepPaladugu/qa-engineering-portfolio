@@ -16,7 +16,7 @@ Audited 7 October 2026. The portfolio implementation is delivered; the tested ap
 | Links and repository hygiene | Relative Markdown links checked; whitespace checked; generated runtime output, local tools, private resume and .env excluded |
 | Avoiding hidden failures | No automatic retries, Thread.sleep or forced JavaScript clicks; original failed histories retained |
 | Source identity | Latest UI run used 290d148b3826804ab3440db5a453e68cb56970b3; final delivery edits are documentation/report changes |
-| Reproduction | Original checkout compiled and executed; clean-clone verification recorded separately after publication |
+| Reproduction | Fresh GitHub clone at 14b3fdebb57ce2e2496366d2f80574ab4869dba7 compiled and passed TC-UI-011: one test, zero failures/errors/skips, Maven exit 0; [record](../evidence/clean-clone-verification.json). This was a representative check, not a repeated full suite |
 | Jenkins / CI artifacts | DEFERRED at owner's request because no server is connected; no pipeline supplied |
 | Database | Design-only SQL; no public database credentials or execution claimed |
 | Other broad-brief features | Video, GitHub Actions, REST Assured and duplicate UI frameworks excluded under the owner's resume/simplicity instruction |

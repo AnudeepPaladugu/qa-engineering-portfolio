@@ -1,0 +1,24 @@
+{
+  "caseId": "TC-UI-011",
+  "method": "cartTotal",
+  "status": "PASS",
+  "observations": [
+    "Cart Blue Top: unit=Rs. 500; quantity=2; total=Rs. 1000"
+  ],
+  "durationMs": 5513,
+  "timestampUtc": "2026-10-07T11:39:22.418146300Z",
+  "baseUrl": "https://automationexercise.com",
+  "gitCommit": "14b3fdebb57ce2e2496366d2f80574ab4869dba7",
+  "cleanup": "PASS",
+  "checkout": "Fresh clone from GitHub into a separate directory",
+  "command": "mvn -q test -Dtest=PortfolioTests#cartTotal -Dgroups=regression",
+  "mavenExitCode": 0,
+  "surefire": {
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "scope": "Representative clean-clone verification only; not another full regression",
+  "warnings": "Selenium reported no matching optional CDP module for Chrome 155; this WebDriver test passed. No CDP-dependent features are used."
+}
