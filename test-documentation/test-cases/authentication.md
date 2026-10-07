@@ -28,9 +28,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: /login rendered; email/password required=true; password type=password
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T10:49:15.534871600Z
+- Execution date: 2026-10-07T11:03:26.407833900Z
 - Executed by: Codex automated Chrome execution
-- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-002 â€” Unknown account receives the actual login error
 
@@ -56,12 +56,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 3 | Enter a generated invalid test password. | The password field is populated and masked. |
 | 4 | Click Login. | The page remains /login and displays Your email or password is incorrect! |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: Observed login error: Your email or password is incorrect!; URL path=/login
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T11:03:21.378818700Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-003 â€” Blank email blocks form submission
 
@@ -86,12 +86,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 2 | Leave email blank. | Email value is empty. |
 | 3 | Click Login. | The URL remains /login and the email validity.valueMissing property is true. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: Blank email validity.valueMissing=true; URL path=/login
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T11:04:37.432742300Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-004 â€” Create a synthetic account through the UI
 
@@ -131,9 +131,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Registration completed; navigation displays Logged in as QA Portfolio
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T10:49:28.795507300Z
+- Execution date: 2026-10-07T11:04:20.836662700Z
 - Executed by: Codex automated Chrome execution
-- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-005 â€” Authenticate with a newly created account
 
@@ -177,9 +177,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Login accepted registered credentials; navigation displays Logged in as QA Portfolio
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T10:49:46.848208700Z
+- Execution date: 2026-10-07T11:05:16.160644100Z
 - Executed by: Codex automated Chrome execution
-- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-006 â€” Logout removes the authenticated navigation
 
@@ -217,12 +217,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 15 | Click Continue. | The home page shows Logged in as QA Portfolio. |
 | 16 | Click Logout. | The URL is /login; Signup / Login is visible and Logged in as QA Portfolio is absent. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Logout navigated to /login; authenticated name absent; Signup / Login visible
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T11:03:40.525706300Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-018 â€” Duplicate signup rejects an existing address
 
@@ -263,9 +263,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 18 | Enter the previously registered email in signup email. | The signup email field contains the existing synthetic account email. |
 | 19 | Click Signup. | Email Address already exist! is visible and the URL remains /signup or /login. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Duplicate signup displayed: Email Address already exist!; URL=/signup
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T11:03:00.245298800Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified

@@ -29,9 +29,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Actual result: Cart Blue Top: unit=Rs. 500; quantity=2; total=Rs. 1000
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T10:48:32.026166300Z
+- Execution date: 2026-10-07T11:01:46.373354200Z
 - Executed by: Codex automated Chrome execution
-- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-012 — Remove the only item from the cart
 
@@ -58,12 +58,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Navigate to /view_cart. | The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000. |
 | 5 | Click the delete control on the Blue Top row. | The Blue Top row disappears and Cart is empty! becomes visible. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: Deleted Blue Top row; Cart is empty! displayed
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T11:04:30.865251700Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-013 — Cart contents survive a same-session refresh
 
@@ -90,9 +90,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Navigate to /view_cart. | The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000. |
 | 5 | Refresh /view_cart. | The Blue Top row still shows quantity 2 and total Rs. 1000. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: After refresh: quantity=2; total=Rs. 1000
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T11:01:38.011742500Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified

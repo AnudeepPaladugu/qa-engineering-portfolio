@@ -32,11 +32,15 @@ Checkout
 Register / Login account to proceed on checkout.
 Register / Login
 Continue On Cart
+Checkout
+Register / Login account to proceed on checkout.
+Register / Login
+Continue On Cart
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T10:49:10.203601100Z
+- Execution date: 2026-10-07T11:03:14.311381600Z
 - Executed by: Codex automated Chrome execution
-- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-015 — Authenticated review carries address and cart total
 
@@ -80,12 +84,24 @@ Continue On Cart
 | 21 | Read the delivery address. | It contains QA Portfolio, Test Street, Vijayawada Andhra Pradesh 520001 and India. |
 | 22 | Read the order review and total. | The Blue Top row shows quantity 2 and Rs. 1000; Total Amount is Rs. 1000. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Checkout delivery address=YOUR DELIVERY ADDRESS
+. QA Portfolio
+Test Street
+Vijayawada Andhra Pradesh 520001
+India
+9999999999; review=Item Description Price Quantity Total
+Blue Top
+Women > Tops
+Rs. 500
+2
+Rs. 1000
+Total Amount
+Rs. 1000
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T11:02:20.652689Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-016 — Submit a simulated order using synthetic payment data
 
@@ -137,9 +153,9 @@ Continue On Cart
 - Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Confirmation URL=/payment_done/1000; ORDER PLACED!; Congratulations! Your order has been confirmed!
 - Status: PASS
 - Defect ID: None recorded
-- Execution date: 2026-10-07T10:49:01.793790200Z
+- Execution date: 2026-10-07T11:02:42.845027100Z
 - Executed by: Codex automated Chrome execution
-- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified
 
 ## TC-UI-017 — Missing name prevents payment submission
 
@@ -184,9 +200,9 @@ Continue On Cart
 | 22 | Leave Name on Card blank. | Name on Card value is empty. |
 | 23 | Click Pay and Confirm Order. | The URL remains /payment and Name on Card validity.valueMissing is true. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Name on Card validity.valueMissing=true; URL path=/payment
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T11:04:03.178233700Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/ui-regression/results.json; generated screenshots and logs under artifacts/runs; Allure attachments verified

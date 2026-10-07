@@ -1,5 +1,8 @@
 # Defect summary
 
-Two real project defects were identified during validation: QA-FW-001 (Allure attachment timing) and QA-DES-001 (incorrect name-only search expectation). Both fixes passed focused verification. The failure audit returned exit 1 with all expected Allure attachments; corrected search passed. Full regression rerun is pending. Neither is a confirmed application defect. The initial regression result remains 19 PASS / 1 FAIL in evidence/initial-regression/results.json.
+| ID | Classification | Actual finding | Current status |
+|---|---|---|---|
+| QA-FW-001 | Framework | Listener outcome attachments were missing from Allure test entries | FIXED AND VERIFIED; all 20 regression entries have outcome attachments |
+| QA-DES-001 | Test design | Search assertion assumed name-only matching despite category matches | FIXED AND VERIFIED; focused and full regression search passed |
 
-No reproducible product defect has been identified in the executed scope. Undefined quantity bounds remain an exploratory requirement question.
+No reproducible application defect was identified in the executed UI scope. The first 19/20 run remains in evidence/initial-regression/results.json. Quantity boundaries still require the exploratory charter and requirement clarification.

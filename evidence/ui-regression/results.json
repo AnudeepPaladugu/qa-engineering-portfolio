@@ -1,0 +1,409 @@
+[
+  {
+    "caseId": "TC-UI-020",
+    "method": "brandFilter",
+    "status": "PASS",
+    "observations": [
+      "Brand heading=BRAND - POLO PRODUCTS; names=[Blue Top, Fancy Green Top, Green Side Placket Detail  T-Shirt, Premium Polo  T-Shirts, Soft Stretch Jeans, Grunt Blue Slim Fit Jeans]"
+    ],
+    "durationMs": 3593,
+    "timestampUtc": "2026-10-07T11:01:28.838803600Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-013",
+    "method": "cartPersists",
+    "status": "PASS",
+    "observations": [
+      "After refresh: quantity=2; total=Rs. 1000"
+    ],
+    "durationMs": 5933,
+    "timestampUtc": "2026-10-07T11:01:38.011742500Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-011",
+    "method": "cartTotal",
+    "status": "PASS",
+    "observations": [
+      "Cart Blue Top: unit=Rs. 500; quantity=2; total=Rs. 1000"
+    ],
+    "durationMs": 4980,
+    "timestampUtc": "2026-10-07T11:01:46.373354200Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-007",
+    "method": "catalog",
+    "status": "PASS",
+    "observations": [
+      "Catalog heading=ALL PRODUCTS; Blue Top card=Rs. 500\nBlue Top\nAdd to cart"
+    ],
+    "durationMs": 5118,
+    "timestampUtc": "2026-10-07T11:01:54.766863500Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-019",
+    "method": "categoryFilter",
+    "status": "PASS",
+    "observations": [
+      "Category heading=WOMEN - TOPS PRODUCTS; names=[Blue Top, Winter Top, Summer White Top, Madame Top For Women, Fancy Green Top, Lace Top For Women]"
+    ],
+    "durationMs": 2567,
+    "timestampUtc": "2026-10-07T11:02:00.799427600Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-015",
+    "method": "checkoutReview",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Checkout delivery address=YOUR DELIVERY ADDRESS\n. QA Portfolio\nTest Street\nVijayawada Andhra Pradesh 520001\nIndia\n9999999999; review=Item Description Price Quantity Total\nBlue Top\nWomen > Tops\nRs. 500\n2\nRs. 1000\nTotal Amount\nRs. 1000"
+    ],
+    "durationMs": 17072,
+    "timestampUtc": "2026-10-07T11:02:20.652689Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-016",
+    "method": "completeOrder",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Confirmation URL=/payment_done/1000; ORDER PLACED!; Congratulations! Your order has been confirmed!"
+    ],
+    "durationMs": 18216,
+    "timestampUtc": "2026-10-07T11:02:42.845027100Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-018",
+    "method": "duplicateSignup",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Duplicate signup displayed: Email Address already exist!; URL=/signup"
+    ],
+    "durationMs": 13166,
+    "timestampUtc": "2026-10-07T11:03:00.245298800Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-014",
+    "method": "guestCheckout",
+    "status": "PASS",
+    "observations": [
+      "Guest checkout modal=\ue9ed\nCheckout\nRegister / Login account to proceed on checkout.\nRegister / Login\nContinue On Cart"
+    ],
+    "durationMs": 5235,
+    "timestampUtc": "2026-10-07T11:03:14.311381600Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-002",
+    "method": "invalidLogin",
+    "status": "PASS",
+    "observations": [
+      "Observed login error: Your email or password is incorrect!; URL path=/login"
+    ],
+    "durationMs": 4096,
+    "timestampUtc": "2026-10-07T11:03:21.378818700Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-001",
+    "method": "loginForm",
+    "status": "PASS",
+    "observations": [
+      "/login rendered; email/password required=true; password type=password"
+    ],
+    "durationMs": 1949,
+    "timestampUtc": "2026-10-07T11:03:26.407833900Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-006",
+    "method": "logout",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Logout navigated to /login; authenticated name absent; Signup / Login visible"
+    ],
+    "durationMs": 11348,
+    "timestampUtc": "2026-10-07T11:03:40.525706300Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-017",
+    "method": "paymentRequiredName",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Name on Card validity.valueMissing=true; URL path=/payment"
+    ],
+    "durationMs": 14583,
+    "timestampUtc": "2026-10-07T11:04:03.178233700Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-010",
+    "method": "productDetails",
+    "status": "PASS",
+    "observations": [
+      "Product details=Blue Top\nCategory: Women > Tops\nRs. 500\nQuantity: Add to cart\nAvailability: In Stock\nCondition: New\nBrand: Polo; initial quantity=1"
+    ],
+    "durationMs": 1902,
+    "timestampUtc": "2026-10-07T11:04:08.915912100Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-004",
+    "method": "registerAccount",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Registration completed; navigation displays Logged in as QA Portfolio"
+    ],
+    "durationMs": 8896,
+    "timestampUtc": "2026-10-07T11:04:20.836662700Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-012",
+    "method": "removeCartItem",
+    "status": "PASS",
+    "observations": [
+      "Deleted Blue Top row; Cart is empty! displayed"
+    ],
+    "durationMs": 5412,
+    "timestampUtc": "2026-10-07T11:04:30.865251700Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-003",
+    "method": "requiredLoginEmail",
+    "status": "PASS",
+    "observations": [
+      "Blank email validity.valueMissing=true; URL path=/login"
+    ],
+    "durationMs": 2335,
+    "timestampUtc": "2026-10-07T11:04:37.432742300Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-009",
+    "method": "searchNoMatch",
+    "status": "PASS",
+    "observations": [
+      "SEARCHED PRODUCTS displayed with zero product cards"
+    ],
+    "durationMs": 4813,
+    "timestampUtc": "2026-10-07T11:04:45.052281700Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-008",
+    "method": "searchTop",
+    "status": "PASS",
+    "observations": [
+      "top search returned 14 products, including Blue Top and the Tops & Shirts category item Little Girls Mr. Panda Shirt: [Blue Top, Winter Top, Summer White Top, Madame Top For Women, Fancy Green Top, Sleeves Printed Top - White, Half Sleeves Top Schiffli Detailing - Pink, Frozen Tops For Kids, Full Sleeves Top Cherry - Pink, Printed Off Shoulder Top - White, Sleeves Top and Short - Blue & Pink, Little Girls Mr. Panda Shirt, Colour Blocked Shirt \u2013 Sky BlueBrowse Clothing, Lace Top For Women]"
+    ],
+    "durationMs": 5336,
+    "timestampUtc": "2026-10-07T11:04:53.326451900Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-005",
+    "method": "validLogin",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Login accepted registered credentials; navigation displays Logged in as QA Portfolio"
+    ],
+    "durationMs": 19787,
+    "timestampUtc": "2026-10-07T11:05:16.160644100Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "8bbd37f4d61ee91603df2763f9b61ba467a9d27e",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  }
+]
