@@ -1,0 +1,145 @@
+[
+  {
+    "caseId": "TC-UI-011",
+    "method": "cartTotal",
+    "status": "PASS",
+    "observations": [
+      "Cart Blue Top: unit=Rs. 500; quantity=2; total=Rs. 1000"
+    ],
+    "durationMs": 5156,
+    "timestampUtc": "2026-10-07T10:48:32.026166300Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "49d3052c991b3447428bb0ce9ed156c92a9cd2e1+working-tree",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-007",
+    "method": "catalog",
+    "status": "PASS",
+    "observations": [
+      "Catalog heading=ALL PRODUCTS; Blue Top card=Rs. 500\nBlue Top\nAdd to cart"
+    ],
+    "durationMs": 5139,
+    "timestampUtc": "2026-10-07T10:48:39.507940200Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "49d3052c991b3447428bb0ce9ed156c92a9cd2e1+working-tree",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-016",
+    "method": "completeOrder",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Confirmation URL=/payment_done/1000; ORDER PLACED!; Congratulations! Your order has been confirmed!"
+    ],
+    "durationMs": 20200,
+    "timestampUtc": "2026-10-07T10:49:01.793790200Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "49d3052c991b3447428bb0ce9ed156c92a9cd2e1+working-tree",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-014",
+    "method": "guestCheckout",
+    "status": "PASS",
+    "observations": [
+      "Guest checkout modal=\ue9ed\nCheckout\nRegister / Login account to proceed on checkout.\nRegister / Login\nContinue On Cart"
+    ],
+    "durationMs": 5175,
+    "timestampUtc": "2026-10-07T10:49:10.203601100Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "49d3052c991b3447428bb0ce9ed156c92a9cd2e1+working-tree",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-001",
+    "method": "loginForm",
+    "status": "PASS",
+    "observations": [
+      "/login rendered; email/password required=true; password type=password"
+    ],
+    "durationMs": 2977,
+    "timestampUtc": "2026-10-07T10:49:15.534871600Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "49d3052c991b3447428bb0ce9ed156c92a9cd2e1+working-tree",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-004",
+    "method": "registerAccount",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Registration completed; navigation displays Logged in as QA Portfolio"
+    ],
+    "durationMs": 11099,
+    "timestampUtc": "2026-10-07T10:49:28.795507300Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "49d3052c991b3447428bb0ce9ed156c92a9cd2e1+working-tree",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  },
+  {
+    "caseId": "TC-UI-005",
+    "method": "validLogin",
+    "status": "PASS",
+    "observations": [
+      "ACCOUNT CREATED! displayed for owned synthetic account",
+      "Login accepted registered credentials; navigation displays Logged in as QA Portfolio"
+    ],
+    "durationMs": 14083,
+    "timestampUtc": "2026-10-07T10:49:46.848208700Z",
+    "environment": "public-demo",
+    "baseUrl": "https://automationexercise.com",
+    "gitCommit": "49d3052c991b3447428bb0ce9ed156c92a9cd2e1+working-tree",
+    "applicationBuild": "Not exposed by public demo",
+    "browser": {
+      "browserName": "chrome",
+      "browserVersion": "155.0.8059.39",
+      "platformName": "WINDOWS"
+    },
+    "cleanup": "PASS"
+  }
+]

@@ -26,12 +26,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 3 | Click Add to cart. | The Added! modal is visible with Your product has been added to cart. |
 | 4 | Navigate to /view_cart. | The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: Cart Blue Top: unit=Rs. 500; quantity=2; total=Rs. 1000
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T10:48:32.026166300Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
 
 ## TC-UI-012 — Remove the only item from the cart
 

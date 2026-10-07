@@ -27,12 +27,16 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Navigate to /view_cart. | The Blue Top row shows Rs. 500, quantity 2 and total Rs. 1000. |
 | 5 | Click Proceed To Checkout. | The checkout modal displays Register / Login account to proceed on checkout. and the Register / Login link. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: Guest checkout modal=
+Checkout
+Register / Login account to proceed on checkout.
+Register / Login
+Continue On Cart
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T10:49:10.203601100Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
 
 ## TC-UI-015 — Authenticated review carries address and cart total
 
@@ -130,12 +134,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 26 | Enter expiry year 2030. | The Expiration year field contains 2030. |
 | 27 | Click Pay and Confirm Order. | ORDER PLACED! and Congratulations! Your order has been confirmed! are visible. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Confirmation URL=/payment_done/1000; ORDER PLACED!; Congratulations! Your order has been confirmed!
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T10:49:01.793790200Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
 
 ## TC-UI-017 — Missing name prevents payment submission
 

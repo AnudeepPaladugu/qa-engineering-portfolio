@@ -24,3 +24,6 @@ No results, defects, coverage percentages or release approval will be invented. 
 - Scope adjustment: [resume alignment](docs/design-decisions/resume-alignment.md).
 
 API observations and guest cart discovery evidence are published under [evidence/discovery](evidence/discovery). Full test execution remains NOT EXECUTED.
+
+- Java framework compiled; seven smoke cases passed with successful cleanup. [Actual smoke evidence](evidence/smoke/results.json).
+- [Run instructions](docs/how-to-run.md) and [failure evidence audit](docs/architecture/evidence-audit.md).

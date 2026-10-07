@@ -24,12 +24,14 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 1 | Navigate to /products. | ALL PRODUCTS is visible and at least one product card is displayed. |
 | 2 | Inspect the Blue Top card. | The card displays Blue Top and Rs. 500. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: Catalog heading=ALL PRODUCTS; Blue Top card=Rs. 500
+Blue Top
+Add to cart
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T10:48:39.507940200Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
 
 ## TC-UI-008 — Search for top returns matching catalog items
 

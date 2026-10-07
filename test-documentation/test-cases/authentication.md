@@ -2,7 +2,7 @@
 
 Status baseline: NOT EXECUTED. Test execution must record an observed result, timestamp and evidence rather than copy the expected result.
 
-## TC-UI-001 — Login form exposes required and masked inputs
+## TC-UI-001 â€” Login form exposes required and masked inputs
 
 - Requirement ID: REQ-AUTH-001
 - Scenario ID: TS-UI-001
@@ -25,14 +25,14 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 2 | Inspect the email required property. | The email field required property is true. |
 | 3 | Inspect the password input type and required property. | The password type is password and required is true. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: /login rendered; email/password required=true; password type=password
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T10:49:15.534871600Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
 
-## TC-UI-002 — Unknown account receives the actual login error
+## TC-UI-002 â€” Unknown account receives the actual login error
 
 - Requirement ID: REQ-AUTH-002
 - Scenario ID: TS-UI-002
@@ -63,7 +63,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Executed by: Not executed
 - Evidence location: Pending execution
 
-## TC-UI-003 — Blank email blocks form submission
+## TC-UI-003 â€” Blank email blocks form submission
 
 - Requirement ID: REQ-AUTH-001
 - Scenario ID: TS-UI-003
@@ -93,7 +93,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Executed by: Not executed
 - Evidence location: Pending execution
 
-## TC-UI-004 — Create a synthetic account through the UI
+## TC-UI-004 â€” Create a synthetic account through the UI
 
 - Requirement ID: REQ-AUTH-003
 - Scenario ID: TS-UI-004
@@ -128,14 +128,14 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 14 | Click Create Account. | ACCOUNT CREATED! is visible. |
 | 15 | Click Continue. | The home page shows Logged in as QA Portfolio. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Registration completed; navigation displays Logged in as QA Portfolio
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T10:49:28.795507300Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
 
-## TC-UI-005 — Authenticate with a newly created account
+## TC-UI-005 â€” Authenticate with a newly created account
 
 - Requirement ID: REQ-AUTH-004
 - Scenario ID: TS-UI-005
@@ -174,14 +174,14 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 18 | Enter the configured test password in the login password field. | The password field is populated and masked. |
 | 19 | Click Login. | The home page shows Logged in as QA Portfolio and Logout is visible. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
+- Actual result: ACCOUNT CREATED! displayed for owned synthetic account; Login accepted registered credentials; navigation displays Logged in as QA Portfolio
+- Status: PASS
 - Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Execution date: 2026-10-07T10:49:46.848208700Z
+- Executed by: Codex automated Chrome execution
+- Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
 
-## TC-UI-006 — Logout removes the authenticated navigation
+## TC-UI-006 â€” Logout removes the authenticated navigation
 
 - Requirement ID: REQ-AUTH-005
 - Scenario ID: TS-UI-006
@@ -224,7 +224,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Executed by: Not executed
 - Evidence location: Pending execution
 
-## TC-UI-018 — Duplicate signup rejects an existing address
+## TC-UI-018 â€” Duplicate signup rejects an existing address
 
 - Requirement ID: REQ-AUTH-003
 - Scenario ID: TS-UI-018
