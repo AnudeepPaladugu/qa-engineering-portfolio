@@ -33,7 +33,7 @@ Add to cart
 - Executed by: Codex automated Chrome execution
 - Evidence location: evidence/smoke/results.json; runtime screenshots and Allure attachments under artifacts/ (ignored by Git)
 
-## TC-UI-008 — Search for top returns matching catalog items
+## TC-UI-008 — Search for top includes name and category matches
 
 - Requirement ID: REQ-CAT-002
 - Scenario ID: TS-UI-008
@@ -55,7 +55,7 @@ Add to cart
 | 1 | Navigate to /products. | Search Product field is visible. |
 | 2 | Enter top in Search Product. | The field contains top. |
 | 3 | Click the search button. | SEARCHED PRODUCTS is visible and at least one matching product is displayed. |
-| 4 | Read each returned product name. | Every displayed name contains top, ignoring case. |
+| 4 | Read each returned product name. | Returned names include Blue Top (name match) and Little Girls Mr. Panda Shirt (observed Tops & Shirts category match). |
 
 - Actual result: Not executed yet.
 - Status: NOT EXECUTED

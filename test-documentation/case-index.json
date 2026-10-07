@@ -357,7 +357,7 @@
     "req": "REQ-CAT-002",
     "scenario": "TS-UI-008",
     "module": "Catalog",
-    "title": "Search for top returns matching catalog items",
+    "title": "Search for top includes name and category matches",
     "steps": [
       [
         "Navigate to /products.",
@@ -373,7 +373,7 @@
       ],
       [
         "Read each returned product name.",
-        "Every displayed name contains top, ignoring case."
+        "Returned names include Blue Top (name match) and Little Girls Mr. Panda Shirt (observed Tops & Shirts category match)."
       ]
     ],
     "kind": "UI",
@@ -1208,7 +1208,7 @@
       ],
       [
         "Inspect responseCode and response fields.",
-        "Body responseCode is 200; products array is non-empty; each returned name contains top, ignoring case."
+        "Body responseCode is 200; products array is non-empty; each returned product contains top in its name or category, ignoring case."
       ]
     ],
     "kind": "API",

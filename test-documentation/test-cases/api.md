@@ -153,7 +153,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 2 | Select HTTP method POST. | The request method is POST. |
 | 3 | Configure form-urlencoded body {"search_product": "top"}. | Request data matches the specified form fields; omitted fields stay omitted. |
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
-| 5 | Inspect responseCode and response fields. | Body responseCode is 200; products array is non-empty; each returned name contains top, ignoring case. |
+| 5 | Inspect responseCode and response fields. | Body responseCode is 200; products array is non-empty; each returned product contains top in its name or category, ignoring case. |
 
 - Actual result: Not executed yet.
 - Status: NOT EXECUTED

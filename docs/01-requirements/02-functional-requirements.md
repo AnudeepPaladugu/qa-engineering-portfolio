@@ -74,7 +74,7 @@ Source references: [application discovery](../00-discovery/application-inspectio
 - Source: Direct browser/DOM discovery and official UI cases
 - Priority: High
 - Business risk: Buyers cannot find products.
-- Acceptance criteria: top search shows matching names; a unique unknown query produces zero cards.
+- Acceptance criteria: top search includes observed name and category matches; a unique unknown query produces zero cards.
 - Dependencies: REQ-CAT-001
 - Testable: Yes
 - Related test cases: TC-UI-008, TC-UI-009
