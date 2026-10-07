@@ -1,6 +1,6 @@
 # Requirement traceability matrix
 
-Design baseline. All 20 UI case outcomes are now recorded; API/manual cases remain NOT EXECUTED. Discovery is recorded separately.
+Design baseline. All 20 UI and nine Postman case outcomes are recorded; three manual charters remain NOT EXECUTED. Discovery is recorded separately.
 
 | Requirement | Scenario | Case | Automation / mode | Result | Defect | Evidence |
 |---|---|---|---|---|---|---|
@@ -24,15 +24,15 @@ Design baseline. All 20 UI case outcomes are now recorded; API/manual cases rema
 | REQ-AUTH-003 | TS-UI-018 | TC-UI-018 | PortfolioTests.duplicateSignup | PASS | None recorded | evidence/ui-regression/results.json |
 | REQ-CAT-004 | TS-UI-019 | TC-UI-019 | PortfolioTests.categoryFilter | PASS | None recorded | evidence/ui-regression/results.json |
 | REQ-CAT-004 | TS-UI-020 | TC-UI-020 | PortfolioTests.brandFilter | PASS | None recorded | evidence/ui-regression/results.json |
-| REQ-API-001 | TS-API-001 | TC-API-001 | manual-api | NOT EXECUTED | None recorded | Pending |
-| REQ-API-001 | TS-API-002 | TC-API-002 | manual-api | NOT EXECUTED | None recorded | Pending |
-| REQ-API-001 | TS-API-003 | TC-API-003 | manual-api | NOT EXECUTED | None recorded | Pending |
-| REQ-API-001 | TS-API-004 | TC-API-004 | manual-api | NOT EXECUTED | None recorded | Pending |
-| REQ-API-002 | TS-API-005 | TC-API-005 | manual-api | NOT EXECUTED | None recorded | Pending |
-| REQ-API-002 | TS-API-006 | TC-API-006 | manual-api | NOT EXECUTED | None recorded | Pending |
-| REQ-API-002 | TS-API-007 | TC-API-007 | manual-api | NOT EXECUTED | None recorded | Pending |
-| REQ-API-002 | TS-API-008 | TC-API-008 | manual-api | NOT EXECUTED | None recorded | Pending |
-| REQ-API-002 | TS-API-009 | TC-API-009 | manual-api | NOT EXECUTED | None recorded | Pending |
+| REQ-API-001 | TS-API-001 | TC-API-001 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
+| REQ-API-001 | TS-API-002 | TC-API-002 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
+| REQ-API-001 | TS-API-003 | TC-API-003 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
+| REQ-API-001 | TS-API-004 | TC-API-004 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
+| REQ-API-002 | TS-API-005 | TC-API-005 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
+| REQ-API-002 | TS-API-006 | TC-API-006 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
+| REQ-API-002 | TS-API-007 | TC-API-007 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
+| REQ-API-002 | TS-API-008 | TC-API-008 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
+| REQ-API-002 | TS-API-009 | TC-API-009 | Postman collection / Newman verification | PASS | QA-PM-001 fixed | evidence/postman/results.json |
 | REQ-AUTH-001 | TS-MAN-001 | TC-MAN-001 | manual | NOT EXECUTED | None recorded | Pending |
 | REQ-CAT-001 | TS-MAN-002 | TC-MAN-002 | manual | NOT EXECUTED | None recorded | Pending |
 | REQ-CART-001 | TS-MAN-003 | TC-MAN-003 | manual | NOT EXECUTED | None recorded | Pending |

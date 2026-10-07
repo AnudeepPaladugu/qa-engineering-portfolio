@@ -15,7 +15,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Risk: Medium
 - Test type: API / functional, with negative and edge cases as indicated by the title
 - Environment: https://automationexercise.com; shared public demo; build not exposed
-- Browser/client: Chrome baseline for UI/manual; Postman for API
+- Browser/client: Postman collection via Newman; Postman GUI import/execution NOT VERIFIED
 - Groups: manual-api
 - Automation: Manual
 
@@ -27,12 +27,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
 | 5 | Inspect responseCode and response fields. | Body responseCode is 200; products array is non-empty; ID 1 has name Blue Top, price Rs. 500 and brand Polo. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
-- Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Actual result: HTTP 200; Content-Type text/html; charset=utf-8; responseCode 200; message None; products 34; brands 0; all 6 Postman assertions passed.
+- Status: PASS
+- Defect ID: QA-PM-001 (fixed collection defect; initial failures retained)
+- Execution date: 2026-10-07T11:11:14.843000+00:00
+- Executed by: Codex exported Postman collection verification using official Newman 6.2.1
+- Evidence location: evidence/postman/results.json; original failed attempts in evidence/postman/initial-script-failures.json
 
 ## TC-API-002 — POST /api/productsList — contract validation
 
@@ -47,7 +47,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Risk: Medium
 - Test type: API / functional, with negative and edge cases as indicated by the title
 - Environment: https://automationexercise.com; shared public demo; build not exposed
-- Browser/client: Chrome baseline for UI/manual; Postman for API
+- Browser/client: Postman collection via Newman; Postman GUI import/execution NOT VERIFIED
 - Groups: manual-api
 - Automation: Manual
 
@@ -59,12 +59,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
 | 5 | Inspect responseCode and response fields. | Body responseCode is 405; message equals This request method is not supported.. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
-- Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Actual result: HTTP 200; Content-Type text/html; charset=utf-8; responseCode 405; message 'This request method is not supported.'; products 0; brands 0; all 4 Postman assertions passed.
+- Status: PASS
+- Defect ID: QA-PM-001 (fixed collection defect; initial failures retained)
+- Execution date: 2026-10-07T11:11:14.843000+00:00
+- Executed by: Codex exported Postman collection verification using official Newman 6.2.1
+- Evidence location: evidence/postman/results.json; original failed attempts in evidence/postman/initial-script-failures.json
 
 ## TC-API-003 — GET /api/brandsList — contract validation
 
@@ -79,7 +79,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Risk: Medium
 - Test type: API / functional, with negative and edge cases as indicated by the title
 - Environment: https://automationexercise.com; shared public demo; build not exposed
-- Browser/client: Chrome baseline for UI/manual; Postman for API
+- Browser/client: Postman collection via Newman; Postman GUI import/execution NOT VERIFIED
 - Groups: manual-api
 - Automation: Manual
 
@@ -91,12 +91,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
 | 5 | Inspect responseCode and response fields. | Body responseCode is 200; brands array is non-empty; each brand has id and brand. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
-- Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Actual result: HTTP 200; Content-Type text/html; charset=utf-8; responseCode 200; message None; products 0; brands 34; all 4 Postman assertions passed.
+- Status: PASS
+- Defect ID: QA-PM-001 (fixed collection defect; initial failures retained)
+- Execution date: 2026-10-07T11:11:14.843000+00:00
+- Executed by: Codex exported Postman collection verification using official Newman 6.2.1
+- Evidence location: evidence/postman/results.json; original failed attempts in evidence/postman/initial-script-failures.json
 
 ## TC-API-004 — PUT /api/brandsList — contract validation
 
@@ -111,7 +111,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Risk: Medium
 - Test type: API / functional, with negative and edge cases as indicated by the title
 - Environment: https://automationexercise.com; shared public demo; build not exposed
-- Browser/client: Chrome baseline for UI/manual; Postman for API
+- Browser/client: Postman collection via Newman; Postman GUI import/execution NOT VERIFIED
 - Groups: manual-api
 - Automation: Manual
 
@@ -123,12 +123,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
 | 5 | Inspect responseCode and response fields. | Body responseCode is 405; message equals This request method is not supported.. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
-- Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Actual result: HTTP 200; Content-Type text/html; charset=utf-8; responseCode 405; message 'This request method is not supported.'; products 0; brands 0; all 4 Postman assertions passed.
+- Status: PASS
+- Defect ID: QA-PM-001 (fixed collection defect; initial failures retained)
+- Execution date: 2026-10-07T11:11:14.843000+00:00
+- Executed by: Codex exported Postman collection verification using official Newman 6.2.1
+- Evidence location: evidence/postman/results.json; original failed attempts in evidence/postman/initial-script-failures.json
 
 ## TC-API-005 — POST /api/searchProduct — contract validation
 
@@ -143,7 +143,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Risk: Medium
 - Test type: API / functional, with negative and edge cases as indicated by the title
 - Environment: https://automationexercise.com; shared public demo; build not exposed
-- Browser/client: Chrome baseline for UI/manual; Postman for API
+- Browser/client: Postman collection via Newman; Postman GUI import/execution NOT VERIFIED
 - Groups: manual-api
 - Automation: Manual
 
@@ -155,12 +155,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
 | 5 | Inspect responseCode and response fields. | Body responseCode is 200; products array is non-empty; each returned product contains top in its name or category, ignoring case. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
-- Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Actual result: HTTP 200; Content-Type text/html; charset=utf-8; responseCode 200; message None; products 14; brands 0; all 5 Postman assertions passed.
+- Status: PASS
+- Defect ID: QA-PM-001 (fixed collection defect; initial failures retained)
+- Execution date: 2026-10-07T11:11:14.843000+00:00
+- Executed by: Codex exported Postman collection verification using official Newman 6.2.1
+- Evidence location: evidence/postman/results.json; original failed attempts in evidence/postman/initial-script-failures.json
 
 ## TC-API-006 — POST /api/searchProduct — contract validation
 
@@ -175,7 +175,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Risk: Medium
 - Test type: API / functional, with negative and edge cases as indicated by the title
 - Environment: https://automationexercise.com; shared public demo; build not exposed
-- Browser/client: Chrome baseline for UI/manual; Postman for API
+- Browser/client: Postman collection via Newman; Postman GUI import/execution NOT VERIFIED
 - Groups: manual-api
 - Automation: Manual
 
@@ -187,12 +187,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
 | 5 | Inspect responseCode and response fields. | Body responseCode is 400; message equals Bad request, search_product parameter is missing in POST request.. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
-- Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Actual result: HTTP 200; Content-Type text/html; charset=utf-8; responseCode 400; message 'Bad request, search_product parameter is missing in POST request.'; products 0; brands 0; all 4 Postman assertions passed.
+- Status: PASS
+- Defect ID: QA-PM-001 (fixed collection defect; initial failures retained)
+- Execution date: 2026-10-07T11:11:14.843000+00:00
+- Executed by: Codex exported Postman collection verification using official Newman 6.2.1
+- Evidence location: evidence/postman/results.json; original failed attempts in evidence/postman/initial-script-failures.json
 
 ## TC-API-007 — POST /api/searchProduct — empty input
 
@@ -207,7 +207,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Risk: Medium
 - Test type: API / functional, with negative and edge cases as indicated by the title
 - Environment: https://automationexercise.com; shared public demo; build not exposed
-- Browser/client: Chrome baseline for UI/manual; Postman for API
+- Browser/client: Postman collection via Newman; Postman GUI import/execution NOT VERIFIED
 - Groups: manual-api
 - Automation: Manual
 
@@ -219,12 +219,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
 | 5 | Inspect responseCode and response fields. | Body responseCode is 200; products is a non-empty array; compare IDs with a fresh productsList response. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
-- Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Actual result: HTTP 200; Content-Type text/html; charset=utf-8; responseCode 200; message None; products 34; brands 0; all 5 Postman assertions passed.
+- Status: PASS
+- Defect ID: QA-PM-001 (fixed collection defect; initial failures retained)
+- Execution date: 2026-10-07T11:11:14.843000+00:00
+- Executed by: Codex exported Postman collection verification using official Newman 6.2.1
+- Evidence location: evidence/postman/results.json; original failed attempts in evidence/postman/initial-script-failures.json
 
 ## TC-API-008 — POST /api/verifyLogin — contract validation
 
@@ -239,7 +239,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Risk: Medium
 - Test type: API / functional, with negative and edge cases as indicated by the title
 - Environment: https://automationexercise.com; shared public demo; build not exposed
-- Browser/client: Chrome baseline for UI/manual; Postman for API
+- Browser/client: Postman collection via Newman; Postman GUI import/execution NOT VERIFIED
 - Groups: manual-api
 - Automation: Manual
 
@@ -251,12 +251,12 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
 | 5 | Inspect responseCode and response fields. | Body responseCode is 400; message equals Bad request, email or password parameter is missing in POST request.. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
-- Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Actual result: HTTP 200; Content-Type text/html; charset=utf-8; responseCode 400; message 'Bad request, email or password parameter is missing in POST request.'; products 0; brands 0; all 4 Postman assertions passed.
+- Status: PASS
+- Defect ID: QA-PM-001 (fixed collection defect; initial failures retained)
+- Execution date: 2026-10-07T11:11:14.843000+00:00
+- Executed by: Codex exported Postman collection verification using official Newman 6.2.1
+- Evidence location: evidence/postman/results.json; original failed attempts in evidence/postman/initial-script-failures.json
 
 ## TC-API-009 — DELETE /api/verifyLogin — contract validation
 
@@ -271,7 +271,7 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 - Risk: Medium
 - Test type: API / functional, with negative and edge cases as indicated by the title
 - Environment: https://automationexercise.com; shared public demo; build not exposed
-- Browser/client: Chrome baseline for UI/manual; Postman for API
+- Browser/client: Postman collection via Newman; Postman GUI import/execution NOT VERIFIED
 - Groups: manual-api
 - Automation: Manual
 
@@ -283,9 +283,9 @@ Status baseline: NOT EXECUTED. Test execution must record an observed result, ti
 | 4 | Send the request once. | HTTP status is 200; parse the body as JSON despite the text/html Content-Type. |
 | 5 | Inspect responseCode and response fields. | Body responseCode is 405; message equals This request method is not supported.. |
 
-- Actual result: Not executed yet.
-- Status: NOT EXECUTED
-- Defect ID: None recorded
-- Execution date: Not executed
-- Executed by: Not executed
-- Evidence location: Pending execution
+- Actual result: HTTP 200; Content-Type text/html; charset=utf-8; responseCode 405; message 'This request method is not supported.'; products 0; brands 0; all 4 Postman assertions passed.
+- Status: PASS
+- Defect ID: QA-PM-001 (fixed collection defect; initial failures retained)
+- Execution date: 2026-10-07T11:11:14.843000+00:00
+- Executed by: Codex exported Postman collection verification using official Newman 6.2.1
+- Evidence location: evidence/postman/results.json; original failed attempts in evidence/postman/initial-script-failures.json

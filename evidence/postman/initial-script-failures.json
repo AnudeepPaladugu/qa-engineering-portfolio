@@ -1,0 +1,92 @@
+[
+  {
+    "run": "postman-first-run.json",
+    "requestsSent": 9,
+    "testScriptsFailed": 9,
+    "assertionsExecuted": 0,
+    "startedEpochMs": 1791371387453,
+    "errors": [
+      {
+        "request": "TC-API-001 GET productsList",
+        "error": "Identifier 'data' has already been declared"
+      },
+      {
+        "request": "TC-API-002 POST productsList",
+        "error": "Identifier 'data' has already been declared"
+      },
+      {
+        "request": "TC-API-003 GET brandsList",
+        "error": "Identifier 'data' has already been declared"
+      },
+      {
+        "request": "TC-API-004 PUT brandsList",
+        "error": "Identifier 'data' has already been declared"
+      },
+      {
+        "request": "TC-API-005 POST searchProduct",
+        "error": "Identifier 'data' has already been declared"
+      },
+      {
+        "request": "TC-API-006 POST searchProduct missing fields",
+        "error": "Identifier 'data' has already been declared"
+      },
+      {
+        "request": "TC-API-007 POST searchProduct empty value",
+        "error": "Identifier 'data' has already been declared"
+      },
+      {
+        "request": "TC-API-008 POST verifyLogin missing fields",
+        "error": "Identifier 'data' has already been declared"
+      },
+      {
+        "request": "TC-API-009 DELETE verifyLogin",
+        "error": "Identifier 'data' has already been declared"
+      }
+    ]
+  },
+  {
+    "run": "postman-second-run.json",
+    "requestsSent": 9,
+    "testScriptsFailed": 9,
+    "assertionsExecuted": 0,
+    "startedEpochMs": 1791371431665,
+    "errors": [
+      {
+        "request": "TC-API-001 GET productsList",
+        "error": "Identifier 'responseBody' has already been declared"
+      },
+      {
+        "request": "TC-API-002 POST productsList",
+        "error": "Identifier 'responseBody' has already been declared"
+      },
+      {
+        "request": "TC-API-003 GET brandsList",
+        "error": "Identifier 'responseBody' has already been declared"
+      },
+      {
+        "request": "TC-API-004 PUT brandsList",
+        "error": "Identifier 'responseBody' has already been declared"
+      },
+      {
+        "request": "TC-API-005 POST searchProduct",
+        "error": "Identifier 'responseBody' has already been declared"
+      },
+      {
+        "request": "TC-API-006 POST searchProduct missing fields",
+        "error": "Identifier 'responseBody' has already been declared"
+      },
+      {
+        "request": "TC-API-007 POST searchProduct empty value",
+        "error": "Identifier 'responseBody' has already been declared"
+      },
+      {
+        "request": "TC-API-008 POST verifyLogin missing fields",
+        "error": "Identifier 'responseBody' has already been declared"
+      },
+      {
+        "request": "TC-API-009 DELETE verifyLogin",
+        "error": "Identifier 'responseBody' has already been declared"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "Automation Exercise public demo",
+  "values": [
+    {
+      "key": "api_base_url",
+      "value": "https://automationexercise.com/api",
+      "enabled": true,
+      "type": "default"
+    }
+  ],
+  "_postman_variable_scope": "environment"
+}

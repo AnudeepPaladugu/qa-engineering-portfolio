@@ -26,3 +26,9 @@ Smoke initially passed 7/7. The first complete regression was 19 PASS / 1 FAIL (
 Across the planned 32 case records at this checkpoint: PASS 20, FAIL 0 latest, BLOCKED 0, SKIPPED 0, NOT EXECUTED 12 (nine Postman/manual API cases and three exploratory charters). Product defects: none reproducibly identified in this executed UI scope. Project defects: two fixed and verified. No Jenkins run is claimed.
 
 QA recommendation: **CONDITIONAL GO for the executed customer UI scope**. The 20-case regression and all seven critical smoke members passed, but API/manual checks and Jenkins verification remain pending. A 100% UI pass rate does not establish complete website quality or payment-security readiness.
+
+## Postman export verification
+
+Nine API cases passed through the official Newman 6.2.1 collection runner: 40 assertions, zero failures, 7.765 seconds total. The request/response observations and collection SHA-256 are in evidence/postman/results.json. Two initial script failures were fixed and retained under QA-PM-001. This does not claim manual execution in the Postman GUI.
+
+Latest planned-case totals: PASS 29, FAIL 0, BLOCKED 0, SKIPPED 0, NOT EXECUTED 3 (exploratory charters). Executed-case pass rate 29/29 = 100%; case execution coverage 29/32 = 90.625%. All 18 defined functional requirements now have executed checks. Jenkins and database execution remain unavailable.

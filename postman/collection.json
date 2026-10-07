@@ -1,0 +1,413 @@
+{
+  "info": {
+    "name": "Automation Exercise \u2014 QA Portfolio API contracts",
+    "description": "Nine resume-aligned Postman cases. No authentication credentials or real account mutations are required. Run in collection order for the empty-search catalog comparison. Source: https://automationexercise.com/api_list.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "noauth"
+  },
+  "variable": [
+    {
+      "key": "api_base_url",
+      "value": "https://automationexercise.com/api"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.variables.set('request_started_at_utc', new Date().toISOString());",
+          "console.info(pm.info.requestName + ' started at ' + pm.variables.get('request_started_at_utc'));"
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "name": "TC-API-001 GET productsList",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{api_base_url}}/productsList",
+          "host": [
+            "{{api_base_url}}"
+          ],
+          "path": [
+            "productsList"
+          ]
+        },
+        "description": "GET /api/productsList \u2014 contract validation\nHTTP status and body responseCode are separate assertions. This demo currently serves JSON using a text/html Content-Type."
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP status is 200', () => pm.response.to.have.status(200));",
+              "pm.test('Content-Type header is present', () => pm.expect(pm.response.headers.get('Content-Type')).to.be.a('string').and.not.empty);",
+              "const qaPortfolioPayload = pm.response.json();",
+              "pm.test('Body responseCode is 200', () => pm.expect(qaPortfolioPayload.responseCode).to.eql(200));",
+              "pm.test('Products are non-empty and well formed', () => { pm.expect(qaPortfolioPayload.products).to.be.an('array').and.not.empty; qaPortfolioPayload.products.forEach(p => { pm.expect(p.id).to.be.a('number'); ['name','price','brand'].forEach(k => pm.expect(p[k]).to.be.a('string').and.not.empty); pm.expect(p.category.category).to.be.a('string'); }); });",
+              "pm.test('Blue Top fixture matches inspected data', () => { const p=qaPortfolioPayload.products.find(p => p.id===1); pm.expect(p).to.be.an('object'); pm.expect(p.name).to.eql('Blue Top'); pm.expect(p.price).to.eql('Rs. 500'); pm.expect(p.brand).to.eql('Polo'); });",
+              "pm.collectionVariables.set('catalog_ids', JSON.stringify(qaPortfolioPayload.products.map(p => p.id).sort((a,b)=>a-b)));",
+              "pm.test('Catalog IDs are unique', () => pm.expect(new Set(qaPortfolioPayload.products.map(p=>p.id)).size).to.eql(qaPortfolioPayload.products.length));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-API-002 POST productsList",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{api_base_url}}/productsList",
+          "host": [
+            "{{api_base_url}}"
+          ],
+          "path": [
+            "productsList"
+          ]
+        },
+        "description": "POST /api/productsList \u2014 contract validation\nHTTP status and body responseCode are separate assertions. This demo currently serves JSON using a text/html Content-Type.",
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP status is 200', () => pm.response.to.have.status(200));",
+              "pm.test('Content-Type header is present', () => pm.expect(pm.response.headers.get('Content-Type')).to.be.a('string').and.not.empty);",
+              "const qaPortfolioPayload = pm.response.json();",
+              "pm.test('Body responseCode is 405', () => pm.expect(qaPortfolioPayload.responseCode).to.eql(405));",
+              "pm.test('Exact validation message', () => pm.expect(qaPortfolioPayload.message).to.eql(\"This request method is not supported.\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-API-003 GET brandsList",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{api_base_url}}/brandsList",
+          "host": [
+            "{{api_base_url}}"
+          ],
+          "path": [
+            "brandsList"
+          ]
+        },
+        "description": "GET /api/brandsList \u2014 contract validation\nHTTP status and body responseCode are separate assertions. This demo currently serves JSON using a text/html Content-Type."
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP status is 200', () => pm.response.to.have.status(200));",
+              "pm.test('Content-Type header is present', () => pm.expect(pm.response.headers.get('Content-Type')).to.be.a('string').and.not.empty);",
+              "const qaPortfolioPayload = pm.response.json();",
+              "pm.test('Body responseCode is 200', () => pm.expect(qaPortfolioPayload.responseCode).to.eql(200));",
+              "pm.test('Brands array is non-empty with typed fields', () => { pm.expect(qaPortfolioPayload.brands).to.be.an('array').and.not.empty; qaPortfolioPayload.brands.forEach(b => {pm.expect(b.id).to.be.a('number');pm.expect(b.brand).to.be.a('string').and.not.empty;}); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-API-004 PUT brandsList",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{api_base_url}}/brandsList",
+          "host": [
+            "{{api_base_url}}"
+          ],
+          "path": [
+            "brandsList"
+          ]
+        },
+        "description": "PUT /api/brandsList \u2014 contract validation\nHTTP status and body responseCode are separate assertions. This demo currently serves JSON using a text/html Content-Type.",
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP status is 200', () => pm.response.to.have.status(200));",
+              "pm.test('Content-Type header is present', () => pm.expect(pm.response.headers.get('Content-Type')).to.be.a('string').and.not.empty);",
+              "const qaPortfolioPayload = pm.response.json();",
+              "pm.test('Body responseCode is 405', () => pm.expect(qaPortfolioPayload.responseCode).to.eql(405));",
+              "pm.test('Exact validation message', () => pm.expect(qaPortfolioPayload.message).to.eql(\"This request method is not supported.\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-API-005 POST searchProduct",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{api_base_url}}/searchProduct",
+          "host": [
+            "{{api_base_url}}"
+          ],
+          "path": [
+            "searchProduct"
+          ]
+        },
+        "description": "POST /api/searchProduct \u2014 contract validation\nHTTP status and body responseCode are separate assertions. This demo currently serves JSON using a text/html Content-Type.",
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "search_product",
+              "value": "top",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP status is 200', () => pm.response.to.have.status(200));",
+              "pm.test('Content-Type header is present', () => pm.expect(pm.response.headers.get('Content-Type')).to.be.a('string').and.not.empty);",
+              "const qaPortfolioPayload = pm.response.json();",
+              "pm.test('Body responseCode is 200', () => pm.expect(qaPortfolioPayload.responseCode).to.eql(200));",
+              "pm.test('Products are non-empty and well formed', () => { pm.expect(qaPortfolioPayload.products).to.be.an('array').and.not.empty; qaPortfolioPayload.products.forEach(p => { pm.expect(p.id).to.be.a('number'); ['name','price','brand'].forEach(k => pm.expect(p[k]).to.be.a('string').and.not.empty); pm.expect(p.category.category).to.be.a('string'); }); });",
+              "pm.test('Each result matches product name or category', () => qaPortfolioPayload.products.forEach(p => pm.expect((p.name+' '+p.category.category).toLowerCase()).to.include('top')));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-API-006 POST searchProduct missing fields",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{api_base_url}}/searchProduct",
+          "host": [
+            "{{api_base_url}}"
+          ],
+          "path": [
+            "searchProduct"
+          ]
+        },
+        "description": "POST /api/searchProduct \u2014 contract validation\nHTTP status and body responseCode are separate assertions. This demo currently serves JSON using a text/html Content-Type.",
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP status is 200', () => pm.response.to.have.status(200));",
+              "pm.test('Content-Type header is present', () => pm.expect(pm.response.headers.get('Content-Type')).to.be.a('string').and.not.empty);",
+              "const qaPortfolioPayload = pm.response.json();",
+              "pm.test('Body responseCode is 400', () => pm.expect(qaPortfolioPayload.responseCode).to.eql(400));",
+              "pm.test('Exact validation message', () => pm.expect(qaPortfolioPayload.message).to.eql(\"Bad request, search_product parameter is missing in POST request.\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-API-007 POST searchProduct empty value",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{api_base_url}}/searchProduct",
+          "host": [
+            "{{api_base_url}}"
+          ],
+          "path": [
+            "searchProduct"
+          ]
+        },
+        "description": "POST /api/searchProduct \u2014 empty input\nHTTP status and body responseCode are separate assertions. This demo currently serves JSON using a text/html Content-Type.",
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "search_product",
+              "value": "",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP status is 200', () => pm.response.to.have.status(200));",
+              "pm.test('Content-Type header is present', () => pm.expect(pm.response.headers.get('Content-Type')).to.be.a('string').and.not.empty);",
+              "const qaPortfolioPayload = pm.response.json();",
+              "pm.test('Body responseCode is 200', () => pm.expect(qaPortfolioPayload.responseCode).to.eql(200));",
+              "pm.test('Products are non-empty and well formed', () => { pm.expect(qaPortfolioPayload.products).to.be.an('array').and.not.empty; qaPortfolioPayload.products.forEach(p => { pm.expect(p.id).to.be.a('number'); ['name','price','brand'].forEach(k => pm.expect(p[k]).to.be.a('string').and.not.empty); pm.expect(p.category.category).to.be.a('string'); }); });",
+              "pm.test('Empty search returns the catalog ID set', () => { const baseline=pm.collectionVariables.get('catalog_ids'); pm.expect(baseline, 'Send TC-API-001 before this case').to.be.a('string'); pm.expect(qaPortfolioPayload.products.map(p=>p.id).sort((a,b)=>a-b)).to.eql(JSON.parse(baseline)); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-API-008 POST verifyLogin missing fields",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{api_base_url}}/verifyLogin",
+          "host": [
+            "{{api_base_url}}"
+          ],
+          "path": [
+            "verifyLogin"
+          ]
+        },
+        "description": "POST /api/verifyLogin \u2014 contract validation\nHTTP status and body responseCode are separate assertions. This demo currently serves JSON using a text/html Content-Type.",
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": []
+        }
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP status is 200', () => pm.response.to.have.status(200));",
+              "pm.test('Content-Type header is present', () => pm.expect(pm.response.headers.get('Content-Type')).to.be.a('string').and.not.empty);",
+              "const qaPortfolioPayload = pm.response.json();",
+              "pm.test('Body responseCode is 400', () => pm.expect(qaPortfolioPayload.responseCode).to.eql(400));",
+              "pm.test('Exact validation message', () => pm.expect(qaPortfolioPayload.message).to.eql(\"Bad request, email or password parameter is missing in POST request.\"));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "TC-API-009 DELETE verifyLogin",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{api_base_url}}/verifyLogin",
+          "host": [
+            "{{api_base_url}}"
+          ],
+          "path": [
+            "verifyLogin"
+          ]
+        },
+        "description": "DELETE /api/verifyLogin \u2014 contract validation\nHTTP status and body responseCode are separate assertions. This demo currently serves JSON using a text/html Content-Type."
+      },
+      "response": [],
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('HTTP status is 200', () => pm.response.to.have.status(200));",
+              "pm.test('Content-Type header is present', () => pm.expect(pm.response.headers.get('Content-Type')).to.be.a('string').and.not.empty);",
+              "const qaPortfolioPayload = pm.response.json();",
+              "pm.test('Body responseCode is 405', () => pm.expect(qaPortfolioPayload.responseCode).to.eql(405));",
+              "pm.test('Exact validation message', () => pm.expect(qaPortfolioPayload.message).to.eql(\"This request method is not supported.\"));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "client": "Postman exported collection / official Newman 6.2.1 runner; GUI execution not verified",
+  "timestampUtc": "2026-10-07T11:11:14.843000+00:00",
+  "collectionSha256": "e1f0a83dfdbdf7b94583d8930ac4ffeb60cf33ee9a92db055d4ed4d833c450dd",
+  "requests": 9,
+  "assertionsPassed": 40,
+  "failures": 0,
+  "durationMs": 7765,
+  "records": [
+    {
+      "caseId": "TC-API-001",
+      "requestName": "TC-API-001 GET productsList",
+      "method": "GET",
+      "httpStatus": 200,
+      "responseCode": 200,
+      "message": null,
+      "productCount": 34,
+      "brandCount": 0,
+      "contentType": "text/html; charset=utf-8",
+      "responseTimeMs": 932,
+      "status": "PASS",
+      "assertions": [
+        {
+          "name": "HTTP status is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Content-Type header is present",
+          "status": "PASS"
+        },
+        {
+          "name": "Body responseCode is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Products are non-empty and well formed",
+          "status": "PASS"
+        },
+        {
+          "name": "Blue Top fixture matches inspected data",
+          "status": "PASS"
+        },
+        {
+          "name": "Catalog IDs are unique",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "caseId": "TC-API-002",
+      "requestName": "TC-API-002 POST productsList",
+      "method": "POST",
+      "httpStatus": 200,
+      "responseCode": 405,
+      "message": "This request method is not supported.",
+      "productCount": 0,
+      "brandCount": 0,
+      "contentType": "text/html; charset=utf-8",
+      "responseTimeMs": 299,
+      "status": "PASS",
+      "assertions": [
+        {
+          "name": "HTTP status is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Content-Type header is present",
+          "status": "PASS"
+        },
+        {
+          "name": "Body responseCode is 405",
+          "status": "PASS"
+        },
+        {
+          "name": "Exact validation message",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "caseId": "TC-API-003",
+      "requestName": "TC-API-003 GET brandsList",
+      "method": "GET",
+      "httpStatus": 200,
+      "responseCode": 200,
+      "message": null,
+      "productCount": 0,
+      "brandCount": 34,
+      "contentType": "text/html; charset=utf-8",
+      "responseTimeMs": 311,
+      "status": "PASS",
+      "assertions": [
+        {
+          "name": "HTTP status is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Content-Type header is present",
+          "status": "PASS"
+        },
+        {
+          "name": "Body responseCode is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Brands array is non-empty with typed fields",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "caseId": "TC-API-004",
+      "requestName": "TC-API-004 PUT brandsList",
+      "method": "PUT",
+      "httpStatus": 200,
+      "responseCode": 405,
+      "message": "This request method is not supported.",
+      "productCount": 0,
+      "brandCount": 0,
+      "contentType": "text/html; charset=utf-8",
+      "responseTimeMs": 288,
+      "status": "PASS",
+      "assertions": [
+        {
+          "name": "HTTP status is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Content-Type header is present",
+          "status": "PASS"
+        },
+        {
+          "name": "Body responseCode is 405",
+          "status": "PASS"
+        },
+        {
+          "name": "Exact validation message",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "caseId": "TC-API-005",
+      "requestName": "TC-API-005 POST searchProduct",
+      "method": "POST",
+      "httpStatus": 200,
+      "responseCode": 200,
+      "message": null,
+      "productCount": 14,
+      "brandCount": 0,
+      "contentType": "text/html; charset=utf-8",
+      "responseTimeMs": 462,
+      "status": "PASS",
+      "assertions": [
+        {
+          "name": "HTTP status is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Content-Type header is present",
+          "status": "PASS"
+        },
+        {
+          "name": "Body responseCode is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Products are non-empty and well formed",
+          "status": "PASS"
+        },
+        {
+          "name": "Each result matches product name or category",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "caseId": "TC-API-006",
+      "requestName": "TC-API-006 POST searchProduct missing fields",
+      "method": "POST",
+      "httpStatus": 200,
+      "responseCode": 400,
+      "message": "Bad request, search_product parameter is missing in POST request.",
+      "productCount": 0,
+      "brandCount": 0,
+      "contentType": "text/html; charset=utf-8",
+      "responseTimeMs": 346,
+      "status": "PASS",
+      "assertions": [
+        {
+          "name": "HTTP status is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Content-Type header is present",
+          "status": "PASS"
+        },
+        {
+          "name": "Body responseCode is 400",
+          "status": "PASS"
+        },
+        {
+          "name": "Exact validation message",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "caseId": "TC-API-007",
+      "requestName": "TC-API-007 POST searchProduct empty value",
+      "method": "POST",
+      "httpStatus": 200,
+      "responseCode": 200,
+      "message": null,
+      "productCount": 34,
+      "brandCount": 0,
+      "contentType": "text/html; charset=utf-8",
+      "responseTimeMs": 592,
+      "status": "PASS",
+      "assertions": [
+        {
+          "name": "HTTP status is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Content-Type header is present",
+          "status": "PASS"
+        },
+        {
+          "name": "Body responseCode is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Products are non-empty and well formed",
+          "status": "PASS"
+        },
+        {
+          "name": "Empty search returns the catalog ID set",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "caseId": "TC-API-008",
+      "requestName": "TC-API-008 POST verifyLogin missing fields",
+      "method": "POST",
+      "httpStatus": 200,
+      "responseCode": 400,
+      "message": "Bad request, email or password parameter is missing in POST request.",
+      "productCount": 0,
+      "brandCount": 0,
+      "contentType": "text/html; charset=utf-8",
+      "responseTimeMs": 337,
+      "status": "PASS",
+      "assertions": [
+        {
+          "name": "HTTP status is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Content-Type header is present",
+          "status": "PASS"
+        },
+        {
+          "name": "Body responseCode is 400",
+          "status": "PASS"
+        },
+        {
+          "name": "Exact validation message",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "caseId": "TC-API-009",
+      "requestName": "TC-API-009 DELETE verifyLogin",
+      "method": "DELETE",
+      "httpStatus": 200,
+      "responseCode": 405,
+      "message": "This request method is not supported.",
+      "productCount": 0,
+      "brandCount": 0,
+      "contentType": "text/html; charset=utf-8",
+      "responseTimeMs": 294,
+      "status": "PASS",
+      "assertions": [
+        {
+          "name": "HTTP status is 200",
+          "status": "PASS"
+        },
+        {
+          "name": "Content-Type header is present",
+          "status": "PASS"
+        },
+        {
+          "name": "Body responseCode is 405",
+          "status": "PASS"
+        },
+        {
+          "name": "Exact validation message",
+          "status": "PASS"
+        }
+      ]
+    }
+  ]
+}
